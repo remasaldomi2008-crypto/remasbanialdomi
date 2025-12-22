@@ -1,1 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Projects & research portfolio for Remas" />
+  <title>Projects — Remas</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <style>
+    .hero-row{display:flex; gap:14px; flex-wrap:wrap; align-items:stretch;}
+    .hero-row .card{flex:1; min-width:260px;}
+    .project-grid{display:grid; grid-template-columns:1.2fr .8fr; gap:14px;}
+    @media (max-width: 900px){ .project-grid{grid-template-columns:1fr;} }
+    .tag-row{display:flex; flex-wrap:wrap; gap:8px; margin-top:10px;}
+    .tag{display:inline-block; padding:6px 10px; border-radius:999px; border:1px solid rgba(255,255,255,.14); background:rgba(255,255,255,.05); font-size:.9rem;}
+    .resources{display:flex; flex-wrap:wrap; gap:10px; margin-top:12px;}
+    .media{
+      border-radius:18px; overflow:hidden;
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(255,255,255,.04);
+    }
+    .media img{width:100%; height:260px; object-fit:cover; display:block;}
+    .media iframe{width:100%; height:260px; border:0; display:block;}
+    .mini{font-size:.95rem; color:var(--muted);}
+    .split{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:14px;}
+    @media (max-width: 900px){ .split{grid-template-columns:1fr;} }
+  </style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header>
+  <div class="container nav">
+    <div class="brand">
+      <span>Remas</span>
+      <span class="badge">Portfolio</span>
+    </div>
+
+    <nav class="links" aria-label="Primary navigation">
+      <a data-nav href="index.html">Home</a>
+      <a data-nav href="projects.html">Projects</a>
+      <a data-nav href="photography.html">Photography</a>
+      <a data-nav href="drawings.html">Drawings</a>
+      <a data-nav href="crafts.html">Crafts</a>
+      <a data-nav href="resume.html">Resume</a>
+    </nav>
+
+    <button class="menu-btn" type="button" data-menu-btn aria-label="Open menu">Menu</button>
+  </div>
+
+  <div class="container mobile" data-mobile aria-label="Mobile navigation">
+    <a data-nav href="index.html">Home</a>
+    <a data-nav href="projects.html">Projects</a>
+    <a data-nav href="photography.html">Photography</a>
+    <a data-nav href="drawings.html">Drawings</a>
+    <a data-nav href="crafts.html">Crafts</a>
+    <a data-nav href="resume.html">Resume</a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="section">
+    <div class="container">
+
+      <!-- Top intro (strong + short) -->
+      <div class="hero-row">
+        <div class="card">
+          <h2 style="margin:0;">Projects & Research</h2>
+          <p class="muted" style="margin-top:10px;">
+            I build projects that connect science, community impact, and careful problem-solving.
+            This section highlights work samples with slides, documents, visuals, and short reflections.
+          </p>
+          <div class="tag-row">
+            <span class="tag">STEM</span>
+            <span class="tag">Health & Medicine</span>
+            <span class="tag">Leadership</span>
+            <span class="tag">Communication</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 style="margin-top:0;">How I Present Work</h3>
+          <p class="muted" style="margin:8px 0 0;">
+            Each project is summarized with: <strong>Goal</strong>, <strong>What I did</strong>,
+            <strong>Results</strong>, and a short <strong>reflection</strong>.
+            Files are attached as slides/documents, plus images or a video if available.
+          </p>
+        </div>
+      </div>
+
+      <!-- FEATURED PROJECT 1 -->
+      <div class="card" style="margin-top:14px;">
+        <div class="project-grid">
+          <div>
+            <h3 style="margin-top:0;">Featured Project: Vision Screening & Community Service</h3>
+            <p class="muted">
+              <strong>Goal:</strong> Support community health by contributing to vision screening / outreach activities.
+              <br><strong>My Role:</strong> Volunteer support, coordination, communication, and documentation.
+            </p>
+
+            <div class="split">
+              <div>
+                <h4 style="margin:0 0 6px;">Key Skills</h4>
+                <ul class="mini" style="margin:0; padding-left:18px;">
+                  <li>Patient-focused communication</li>
+                  <li>Team coordination and reliability</li>
+                  <li>Clear documentation and organization</li>
+                </ul>
+              </div>
+              <div>
+                <h4 style="margin:0 0 6px;">Reflection</h4>
+                <p class="mini" style="margin:0;">
+                  This experience strengthened my interest in healthcare and showed me how small actions
+                  can create real impact for people.
+                </p>
+              </div>
+            </div>
+
+            <div class="resources">
+              <!-- Replace these files when you upload -->
+              <a class="btn primary" href="assets/files/projects/vision/vision_slides.pdf">Slides (PDF)</a>
+              <a class="btn" href="assets/files/projects/vision/vision_summary.pdf">1-page Summary (PDF)</a>
+              <!-- Optional: add a video link later -->
+              <!-- <a class="btn" href="https://youtube.com/..." target="_blank" rel="noopener">Video</a> -->
+            </div>
+
+            <p class="mini" style="margin-top:10px;">
+              Files folder: <span class="kbd">assets/files/projects/vision/</span>
+            </p>
+          </div>
+
+          <div class="media" aria-label="Project media">
+            <!-- Replace with a real image -->
+            <img src="assets/images/projects/vision/cover.jpg" alt="Vision project cover image">
+          </div>
+        </div>
+      </div>
+
+      <!-- FEATURED PROJECT 2 -->
+      <div class="card" style="margin-top:14px;">
+        <div class="project-grid">
+          <div>
+            <h3 style="margin-top:0;">Featured Project: STEM / Health Exploration (Presentation)</h3>
+            <p class="muted">
+              <strong>Goal:</strong> Explore a health topic (or medical AI topic) and present it clearly with visuals.
+              <br><strong>My Role:</strong> Research, slide design, and presentation.
+            </p>
+
+            <div class="split">
+              <div>
+                <h4 style="margin:0 0 6px;">What I Learned</h4>
+                <ul class="mini" style="margin:0; padding-left:18px;">
+                  <li>How to find reliable sources and summarize them</li>
+                  <li>How to explain complex ideas clearly</li>
+                  <li>How to design professional slides</li>
+                </ul>
+              </div>
+              <div>
+                <h4 style="margin:0 0 6px;">Outcome</h4>
+                <p class="mini" style="margin:0;">
+                  A clean deck + short written summary that shows research ability and communication.
+                </p>
+              </div>
+            </div>
+
+            <div class="resources">
+              <a class="btn primary" href="assets/files/projects/stem/stem_slides.pdf">Slides (PDF)</a>
+              <a class="btn" href="assets/files/projects/stem/stem_notes.pdf">Notes (PDF)</a>
+              <!-- Optional: embed video below instead -->
+            </div>
+
+            <p class="mini" style="margin-top:10px;">
+              Files folder: <span class="kbd">assets/files/projects/stem/</span>
+            </p>
+          </div>
+
+          <div class="media" aria-label="Project media">
+            <!-- OPTION A: image cover -->
+            <img src="assets/images/projects/stem/cover.jpg" alt="STEM project cover image">
+
+            <!-- OPTION B: YouTube embed (replace link) -->
+            <!--
+            <iframe
+              src="https://www.youtube.com/embed/VIDEO_ID"
+              title="Project video"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+            -->
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT LIBRARY (add as many as you want) -->
+      <h2 style="margin-top:22px;">Project Library</h2>
+      <p class="muted">Short, strong projects with clear evidence (slides, files, images, or videos).</p>
+
+      <div class="card-grid" style="margin-top:12px;">
+        <div class="card">
+          <h3 style="margin-top:0;">Project Title (Add yours)</h3>
+          <p class="muted">1–2 lines: what you built or studied, and why it matters.</p>
+          <div class="resources">
+            <a class="btn primary" href="assets/files/projects/project1/slides.pdf">Slides</a>
+            <a class="btn" href="assets/files/projects/project1/doc.pdf">Document</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 style="margin-top:0;">Project Title (Add yours)</h3>
+          <p class="muted">1–2 lines: what skill it shows (leadership, STEM, healthcare interest).</p>
+          <div class="resources">
+            <a class="btn primary" href="assets/files/projects/project2/slides.pdf">Slides</a>
+            <a class="btn" href="assets/files/projects/project2/doc.pdf">Document</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 style="margin-top:0;">Project Title (Add yours)</h3>
+          <p class="muted">1–2 lines: what you learned and the outcome.</p>
+          <div class="resources">
+            <a class="btn primary" href="assets/files/projects/project3/slides.pdf">Slides</a>
+            <a class="btn" href="assets/files/projects/project3/doc.pdf">Document</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div style="margin-top:8px;">
+      © <span id="y"></span> Remas Sadam Bani Aldomi —
+      <a href="mailto:remasbanialdomi@gmail.com">remasbanialdomi@gmail.com</a>
+      — built with GitHub Pages
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
 
