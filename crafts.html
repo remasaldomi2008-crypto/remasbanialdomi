@@ -3,9 +3,62 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Crafts gallery" />
+  <meta name="description" content="Crafts portfolio gallery" />
   <title>Crafts — Remas</title>
   <link rel="stylesheet" href="assets/css/styles.css" />
+  <style>
+    /* Minimal page-only styling (keeps your main design) */
+    .hero-row{display:flex; gap:14px; flex-wrap:wrap; align-items:stretch;}
+    .hero-row .card{flex:1; min-width:260px;}
+    .slider{
+      position:relative;
+      border-radius:18px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.04);
+      box-shadow: 0 18px 50px rgba(0,0,0,.28);
+    }
+    .slide-frame{
+      aspect-ratio: 16/9;
+      width:100%;
+      display:block;
+      object-fit:cover;
+      background:#0b1020;
+    }
+    .slide-overlay{
+      position:absolute;
+      left:0; right:0; bottom:0;
+      padding:14px 14px 12px;
+      background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.6) 100%);
+    }
+    .slide-title{margin:0; font-weight:700;}
+    .slide-cap{margin:4px 0 0; color: rgba(255,255,255,.82); font-size:.95rem;}
+    .slide-controls{
+      position:absolute;
+      top:10px; right:10px;
+      display:flex; gap:8px;
+    }
+    .icon-btn{
+      border:1px solid rgba(255,255,255,.16);
+      background: rgba(0,0,0,.35);
+      color:#fff;
+      padding:8px 10px;
+      border-radius:999px;
+      cursor:pointer;
+      font-weight:700;
+    }
+    .icon-btn:hover{background: rgba(0,0,0,.55);}
+    .dots{display:flex; gap:8px; padding:10px; justify-content:center;}
+    .dot{
+      width:9px; height:9px; border-radius:50%;
+      border:1px solid rgba(255,255,255,.25);
+      background: rgba(255,255,255,.12);
+      cursor:pointer;
+    }
+    .dot.active{background: rgba(255,255,255,.85);}
+    .grid-2{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
+    @media (max-width: 800px){ .grid-2{grid-template-columns:1fr;} }
+  </style>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -40,55 +93,111 @@
 <main id="main">
   <section class="section">
     <div class="container">
-      <h2>Crafts</h2>
-      <p>
-        A curated gallery of handmade crafts and creative projects.
-        Each piece includes a short caption describing the idea, materials, and what skill it shows.
-      </p>
 
-      <div class="card-grid" style="grid-template-columns:1fr 1fr; margin-top:14px;">
+      <div class="hero-row">
         <div class="card">
-          <h3>How to present crafts</h3>
-          <p class="muted">
-            • Show 1–3 best photos per craft<br>
-            • Caption: idea + materials + time spent + what you learned<br>
-            • Keep only your strongest work
+          <h2 style="margin:0;">Crafts</h2>
+          <p class="muted" style="margin-top:10px;">
+            A curated selection of handmade projects that highlight creativity, precision, and design thinking.
+          </p>
+          <div class="pills" style="margin-top:10px;">
+            <span class="pill">Design</span>
+            <span class="pill">Craftsmanship</span>
+            <span class="pill">Presentation</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 style="margin-top:0;">Featured Project</h3>
+          <p class="muted" style="margin:8px 0 0;">
+            <strong>Juha’s Desert Delights</strong> — a mini food truck model.
+            Built with hand-crafted details to show planning, precision cutting, and visual storytelling.
           </p>
         </div>
-        <div class="card">
-          <h3>Folder</h3>
-          <p class="muted">Put images here: <span class="kbd">assets/images/crafts/</span></p>
-          <p class="muted">Then update the list in the JavaScript below.</p>
-        </div>
       </div>
 
-      <div class="btn-row">
-        <button class="btn primary" type="button" data-autoplay>Play Slideshow</button>
-        <button class="btn" type="button" data-stop>Stop</button>
-      </div>
-
-      <div id="gallery" class="gallery" aria-label="Crafts gallery"></div>
-
+      <!-- SLIDER -->
       <div class="card" style="margin-top:14px;">
-        <h3>Update captions later</h3>
-        <p class="muted">
-          Replace the captions below with real descriptions like:
-          “Paper craft food truck — design planning + precision cutting.”
-        </p>
+        <h3 style="margin-top:0;">Gallery</h3>
+
+        <div class="slider" aria-label="Crafts slideshow" style="margin-top:10px;">
+          <div class="slide-controls">
+            <button class="icon-btn" type="button" id="prevBtn" aria-label="Previous">‹</button>
+            <button class="icon-btn" type="button" id="nextBtn" aria-label="Next">›</button>
+          </div>
+
+          <img id="slideImg" class="slide-frame" src="" alt="Craft image" />
+          <div class="slide-overlay">
+            <p class="slide-title" id="slideTitle">Craft</p>
+            <p class="slide-cap" id="slideCap"></p>
+          </div>
+        </div>
+
+        <div class="dots" id="dots" aria-label="Slideshow navigation"></div>
       </div>
+
+      <!-- GRID (clickable lightbox gallery from your existing JS) -->
+      <div class="card" style="margin-top:14px;">
+        <h3 style="margin-top:0;">All Crafts</h3>
+        <div id="gallery" class="gallery" aria-label="Crafts gallery" style="margin-top:10px;"></div>
+      </div>
+
     </div>
   </section>
 
   <script src="assets/js/lightbox.js"></script>
   <script>
+    // Update only this list when you add real images
     const images = [
-      { src:"assets/images/crafts/sample_03.jpg", caption:"Mini-traditional Bus", alt:"Mini-traditional Bus" },
-      { src:"assets/images/crafts/craft02.jpg", caption:"Craft 2 — placeholder caption", alt:"Craft 2" },
-      { src:"assets/images/crafts/craft03.jpg", caption:"Craft 3 — placeholder caption", alt:"Craft 3" },
-      { src:"assets/images/crafts/craft04.jpg", caption:"Craft 4 — placeholder caption", alt:"Craft 4" },
-      { src:"assets/images/crafts/craft05.jpg", caption:"Craft 5 — placeholder caption", alt:"Craft 5" }
+      { src:"assets/images/crafts/sample_03.jpg", title:"Juha’s Desert Delights", caption:"Mini food-truck model — design + precision + creative details", alt:"Craft project" },
+      { src:"assets/images/crafts/craft02.jpg", title:"Craft Project", caption:"Short description (materials + what it shows)", alt:"Craft project" },
+      { src:"assets/images/crafts/craft03.jpg", title:"Craft Project", caption:"Short description (skills + idea)", alt:"Craft project" },
+      { src:"assets/images/crafts/craft04.jpg", title:"Craft Project", caption:"Short description", alt:"Craft project" },
+      { src:"assets/images/crafts/craft05.jpg", title:"Craft Project", caption:"Short description", alt:"Craft project" }
     ];
-    initGallery("gallery", images, { title: "Crafts", autoplayMs: 3200 });
+
+    // --- Slider logic ---
+    let idx = 0;
+    const imgEl = document.getElementById("slideImg");
+    const titleEl = document.getElementById("slideTitle");
+    const capEl = document.getElementById("slideCap");
+    const dotsEl = document.getElementById("dots");
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+
+    function renderDots(){
+      dotsEl.innerHTML = "";
+      images.forEach((_, i) => {
+        const d = document.createElement("button");
+        d.className = "dot" + (i === idx ? " active" : "");
+        d.type = "button";
+        d.setAttribute("aria-label", "Go to slide " + (i+1));
+        d.addEventListener("click", () => { idx = i; showSlide(); });
+        dotsEl.appendChild(d);
+      });
+    }
+
+    function showSlide(){
+      const it = images[idx];
+      imgEl.src = it.src;
+      imgEl.alt = it.alt || it.title || "Craft image";
+      titleEl.textContent = it.title || "Craft";
+      capEl.textContent = it.caption || "";
+      renderDots();
+    }
+
+    prevBtn.addEventListener("click", () => { idx = (idx - 1 + images.length) % images.length; showSlide(); });
+    nextBtn.addEventListener("click", () => { idx = (idx + 1) % images.length; showSlide(); });
+
+    // Start
+    showSlide();
+
+    // Use your existing gallery lightbox
+    initGallery("gallery", images.map(x => ({
+      src: x.src,
+      caption: (x.title ? (x.title + " — "): "") + (x.caption || ""),
+      alt: x.alt || x.title || "Craft"
+    })), { title: "Crafts", autoplayMs: 0 });
   </script>
 </main>
 
