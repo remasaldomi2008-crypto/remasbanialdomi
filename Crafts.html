@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Crafts gallery" />
+  <title>Crafts — Remas</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header>
+  <div class="container nav">
+    <div class="brand">
+      <span>Remas</span>
+      <span class="badge">Portfolio</span>
+    </div>
+    <nav class="links" aria-label="Primary navigation">
+      <a data-nav href="index.html">Home</a>
+      <a data-nav href="photography.html">Photography</a>
+      <a data-nav href="drawings.html">Drawings</a>
+      <a data-nav href="minecraft.html">Minecraft</a>
+      <a data-nav href="crafts.html">Crafts</a>
+      <a data-nav href="resume.html">Resume</a>
+    </nav>
+    <button class="menu-btn" type="button" data-menu-btn aria-label="Open menu">Menu</button>
+  </div>
+
+  <div class="container mobile" data-mobile aria-label="Mobile navigation">
+    <a data-nav href="index.html">Home</a>
+    <a data-nav href="photography.html">Photography</a>
+    <a data-nav href="drawings.html">Drawings</a>
+    <a data-nav href="minecraft.html">Minecraft</a>
+    <a data-nav href="crafts.html">Crafts</a>
+    <a data-nav href="resume.html">Resume</a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="section">
+    <div class="container">
+      <h2>Crafts</h2>
+      <p>
+        A curated gallery of handmade crafts and creative projects.
+        Each piece includes a short caption describing the idea, materials, and what skill it shows.
+      </p>
+
+      <div class="card-grid" style="grid-template-columns:1fr 1fr; margin-top:14px;">
+        <div class="card">
+          <h3>How to present crafts</h3>
+          <p class="muted">
+            • Show 1–3 best photos per craft<br>
+            • Caption: idea + materials + time spent + what you learned<br>
+            • Keep only your strongest work
+          </p>
+        </div>
+        <div class="card">
+          <h3>Folder</h3>
+          <p class="muted">Put images here: <span class="kbd">assets/images/crafts/</span></p>
+          <p class="muted">Then update the list in the JavaScript below.</p>
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <button class="btn primary" type="button" data-autoplay>Play Slideshow</button>
+        <button class="btn" type="button" data-stop>Stop</button>
+      </div>
+
+      <div id="gallery" class="gallery" aria-label="Crafts gallery"></div>
+
+      <div class="card" style="margin-top:14px;">
+        <h3>Update captions later</h3>
+        <p class="muted">
+          Replace the captions below with real descriptions like:
+          “Paper craft food truck — design planning + precision cutting.”
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <script src="assets/js/lightbox.js"></script>
+  <script>
+    const images = [
+      { src:"assets/images/crafts/craft01.jpg", caption:"Craft 1 — placeholder caption", alt:"Craft 1" },
+      { src:"assets/images/crafts/craft02.jpg", caption:"Craft 2 — placeholder caption", alt:"Craft 2" },
+      { src:"assets/images/crafts/craft03.jpg", caption:"Craft 3 — placeholder caption", alt:"Craft 3" },
+      { src:"assets/images/crafts/craft04.jpg", caption:"Craft 4 — placeholder caption", alt:"Craft 4" },
+      { src:"assets/images/crafts/craft05.jpg", caption:"Craft 5 — placeholder caption", alt:"Craft 5" }
+    ];
+    initGallery("gallery", images, { title: "Crafts", autoplayMs: 3200 });
+  </script>
+</main>
+
+<footer>
+  <div class="container">
+    <div style="margin-top:8px;">
+      © <span id="y"></span> Remas Sadam Bani Aldomi —
+      <a href="mailto:remasbanialdomi@gmail.com">remasbanialdomi@gmail.com</a>
+      — built with GitHub Pages
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
