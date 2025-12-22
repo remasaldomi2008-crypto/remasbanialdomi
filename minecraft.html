@@ -3,12 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Minecraft build gallery" />
+  <meta name="description" content="Crafts gallery" />
   <title>Crafts — Remas</title>
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
+
 <header>
   <div class="container nav">
     <div class="brand">
@@ -19,73 +20,85 @@
       <a data-nav href="index.html">Home</a>
       <a data-nav href="photography.html">Photography</a>
       <a data-nav href="drawings.html">Drawings</a>
-      <a data-nav href="minecraft.html">Crafts</a>
+      <a data-nav href="minecraft.html">Minecraft</a>
+      <a data-nav href="crafts.html">Crafts</a>
       <a data-nav href="resume.html">Resume</a>
     </nav>
     <button class="menu-btn" type="button" data-menu-btn aria-label="Open menu">Menu</button>
   </div>
+
   <div class="container mobile" data-mobile aria-label="Mobile navigation">
     <a data-nav href="index.html">Home</a>
     <a data-nav href="photography.html">Photography</a>
     <a data-nav href="drawings.html">Drawings</a>
-    <a data-nav href="minecraft.html">Crafts</a>
+    <a data-nav href="minecraft.html">Minecraft</a>
+    <a data-nav href="crafts.html">Crafts</a>
     <a data-nav href="resume.html">Resume</a>
   </div>
 </header>
 
 <main id="main">
+  <section class="section">
+    <div class="container">
+      <h2>Crafts</h2>
+      <p>
+        A curated gallery of handmade crafts and creative projects.
+        Each piece includes a short caption describing the idea, materials, and what skill it shows.
+      </p>
 
-<section class="section">
-  <div class="container">
-    <h2>Minecraft Builds</h2>
-    <p>Admissions reviewers like to see: <strong>what you built</strong>, <strong>why</strong>, and <strong>what skills it shows</strong> (planning, creativity, teamwork, engineering thinking).</p>
+      <div class="card-grid" style="grid-template-columns:1fr 1fr; margin-top:14px;">
+        <div class="card">
+          <h3>How to present crafts</h3>
+          <p class="muted">
+            • Show 1–3 best photos per craft<br>
+            • Caption: idea + materials + time spent + what you learned<br>
+            • Keep only your strongest work
+          </p>
+        </div>
+        <div class="card">
+          <h3>Folder</h3>
+          <p class="muted">Put images here: <span class="kbd">assets/images/crafts/</span></p>
+          <p class="muted">Then update the list in the JavaScript below.</p>
+        </div>
+      </div>
 
-    <div class="card-grid" style="grid-template-columns:1fr 1fr; margin-top:14px;">
-      <div class="card">
-        <h3>How to present builds</h3>
+      <div class="btn-row">
+        <button class="btn primary" type="button" data-autoplay>Play Slideshow</button>
+        <button class="btn" type="button" data-stop>Stop</button>
+      </div>
+
+      <div id="gallery" class="gallery" aria-label="Crafts gallery"></div>
+
+      <div class="card" style="margin-top:14px;">
+        <h3>Update captions later</h3>
         <p class="muted">
-          • Add 5–10 best screenshots per build<br>
-          • Caption: goal + constraints + what you learned<br>
-          • If you used Redstone: explain the logic briefly
+          Replace the captions below with real descriptions like:
+          “Paper craft food truck — design planning + precision cutting.”
         </p>
       </div>
-      <div class="card">
-        <h3>Folder</h3>
-        <p class="muted">Put images here: <span class="kbd">assets/images/minecraft/</span></p>
-        <p class="muted">Then list them in the JavaScript array below.</p>
-      </div>
     </div>
+  </section>
 
-    <div class="btn-row">
-      <button class="btn primary" type="button" data-autoplay>Play Slideshow</button>
-      <button class="btn" type="button" data-stop>Stop</button>
-    </div>
-
-    <div id="gallery" class="gallery" aria-label="Minecraft gallery"></div>
-
-    <div class="card" style="margin-top:14px;">
-      <h3>Add your images</h3>
-      <p class="muted">Replace the list in <span class="kbd">minecraft.html</span> with your real screenshots.</p>
-      <p class="muted">Example captions: “Clinic layout build (team project)”, “Redstone automatic farm”, “Sustainable village design”.</p>
-    </div>
-  </div>
-</section>
-
-<script src="assets/js/lightbox.js"></script>
-<script>
-  const images = [
-    // Example:
-    // { src:"assets/images/minecraft/build01.jpg", caption:"Sustainable village design (planning + layout)", alt:"Minecraft build" },
-  ];
-  initGallery("gallery", images, { title: "Minecraft Builds", autoplayMs: 3000 });
-</script>
-
+  <script src="assets/js/lightbox.js"></script>
+  <script>
+    const images = [
+      { src:"assets/images/crafts/craft01.jpg", caption:"Craft 1 — placeholder caption", alt:"Craft 1" },
+      { src:"assets/images/crafts/craft02.jpg", caption:"Craft 2 — placeholder caption", alt:"Craft 2" },
+      { src:"assets/images/crafts/craft03.jpg", caption:"Craft 3 — placeholder caption", alt:"Craft 3" },
+      { src:"assets/images/crafts/craft04.jpg", caption:"Craft 4 — placeholder caption", alt:"Craft 4" },
+      { src:"assets/images/crafts/craft05.jpg", caption:"Craft 5 — placeholder caption", alt:"Craft 5" }
+    ];
+    initGallery("gallery", images, { title: "Crafts", autoplayMs: 3200 });
+  </script>
 </main>
 
 <footer>
   <div class="container">
-    <div><strong>Tip:</strong> Keep personal details private on public sites (e.g., phone, full address, date of birth).</div>
-    <div style="margin-top:8px;">© <span id="y"></span> Remas — built with GitHub Pages</div>
+    <div style="margin-top:8px;">
+      © <span id="y"></span> Remas Sadam Bani Aldomi —
+      <a href="mailto:remasbanialdomi@gmail.com">remasbanialdomi@gmail.com</a>
+      — built with GitHub Pages
+    </div>
   </div>
 </footer>
 
