@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Photography gallery" />
+  <title>Photography — Remas</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header>
+  <div class="container nav">
+    <div class="brand">
+      <span>Remas</span>
+      <span class="badge">Portfolio</span>
+    </div>
+    <nav class="links" aria-label="Primary navigation">
+      <a data-nav href="index.html">Home</a>
+      <a data-nav href="photography.html">Photography</a>
+      <a data-nav href="drawings.html">Drawings</a>
+      <a data-nav href="minecraft.html">Minecraft</a>
+      <a data-nav href="resume.html">Resume</a>
+    </nav>
+    <button class="menu-btn" type="button" data-menu-btn aria-label="Open menu">Menu</button>
+  </div>
+  <div class="container mobile" data-mobile aria-label="Mobile navigation">
+    <a data-nav href="index.html">Home</a>
+    <a data-nav href="photography.html">Photography</a>
+    <a data-nav href="drawings.html">Drawings</a>
+    <a data-nav href="minecraft.html">Minecraft</a>
+    <a data-nav href="resume.html">Resume</a>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="section">
+  <div class="container">
+    <h2>Photography</h2>
+    <p>Curated work only (best 12–20 images). Add 1–2 sentence captions: location/context + what you learned (composition, lighting, storytelling).</p>
+    <div class="btn-row">
+      <button class="btn primary" type="button" data-autoplay>Play Slideshow</button>
+      <button class="btn" type="button" data-stop>Stop</button>
+    </div>
+    <div id="gallery" class="gallery" aria-label="Photography gallery"></div>
+  </div>
+</section>
+
+<script src="assets/js/lightbox.js"></script>
+<script>
+  const images = [
+    {src:"assets/images/photography/sample_01.jpg", caption:"Sample photo 1", alt:"Sample photo 1"},
+    {src:"assets/images/photography/sample_02.jpg", caption:"Sample photo 2", alt:"Sample photo 2"},
+    {src:"assets/images/photography/sample_04.jpg", caption:"Sample photo 3", alt:"Sample photo 3"},
+    {src:"assets/images/photography/sample_05.jpg", caption:"Sample photo 4", alt:"Sample photo 4"},
+    {src:"assets/images/photography/sample_06.jpg", caption:"Sample photo 5", alt:"Sample photo 5"},
+    {src:"assets/images/photography/sample_07.jpg", caption:"Sample photo 6", alt:"Sample photo 6"}
+  ];
+  initGallery("gallery", images, { title: "Photography", autoplayMs: 3200 });
+</script>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div><strong>Tip:</strong> Keep personal details private on public sites (e.g., phone, full address, date of birth).</div>
+    <div style="margin-top:8px;">© <span id="y"></span> Remas — built with GitHub Pages</div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>

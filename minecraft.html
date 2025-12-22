@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Minecraft build gallery" />
+  <title>Minecraft — Remas</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header>
+  <div class="container nav">
+    <div class="brand">
+      <span>Remas</span>
+      <span class="badge">Portfolio</span>
+    </div>
+    <nav class="links" aria-label="Primary navigation">
+      <a data-nav href="index.html">Home</a>
+      <a data-nav href="photography.html">Photography</a>
+      <a data-nav href="drawings.html">Drawings</a>
+      <a data-nav href="minecraft.html">Minecraft</a>
+      <a data-nav href="resume.html">Resume</a>
+    </nav>
+    <button class="menu-btn" type="button" data-menu-btn aria-label="Open menu">Menu</button>
+  </div>
+  <div class="container mobile" data-mobile aria-label="Mobile navigation">
+    <a data-nav href="index.html">Home</a>
+    <a data-nav href="photography.html">Photography</a>
+    <a data-nav href="drawings.html">Drawings</a>
+    <a data-nav href="minecraft.html">Minecraft</a>
+    <a data-nav href="resume.html">Resume</a>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="section">
+  <div class="container">
+    <h2>Minecraft Builds</h2>
+    <p>Admissions reviewers like to see: <strong>what you built</strong>, <strong>why</strong>, and <strong>what skills it shows</strong> (planning, creativity, teamwork, engineering thinking).</p>
+
+    <div class="card-grid" style="grid-template-columns:1fr 1fr; margin-top:14px;">
+      <div class="card">
+        <h3>How to present builds</h3>
+        <p class="muted">
+          • Add 5–10 best screenshots per build<br>
+          • Caption: goal + constraints + what you learned<br>
+          • If you used Redstone: explain the logic briefly
+        </p>
+      </div>
+      <div class="card">
+        <h3>Folder</h3>
+        <p class="muted">Put images here: <span class="kbd">assets/images/minecraft/</span></p>
+        <p class="muted">Then list them in the JavaScript array below.</p>
+      </div>
+    </div>
+
+    <div class="btn-row">
+      <button class="btn primary" type="button" data-autoplay>Play Slideshow</button>
+      <button class="btn" type="button" data-stop>Stop</button>
+    </div>
+
+    <div id="gallery" class="gallery" aria-label="Minecraft gallery"></div>
+
+    <div class="card" style="margin-top:14px;">
+      <h3>Add your images</h3>
+      <p class="muted">Replace the list in <span class="kbd">minecraft.html</span> with your real screenshots.</p>
+      <p class="muted">Example captions: “Clinic layout build (team project)”, “Redstone automatic farm”, “Sustainable village design”.</p>
+    </div>
+  </div>
+</section>
+
+<script src="assets/js/lightbox.js"></script>
+<script>
+  const images = [
+    // Example:
+    // { src:"assets/images/minecraft/build01.jpg", caption:"Sustainable village design (planning + layout)", alt:"Minecraft build" },
+  ];
+  initGallery("gallery", images, { title: "Minecraft Builds", autoplayMs: 3000 });
+</script>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div><strong>Tip:</strong> Keep personal details private on public sites (e.g., phone, full address, date of birth).</div>
+    <div style="margin-top:8px;">© <span id="y"></span> Remas — built with GitHub Pages</div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
