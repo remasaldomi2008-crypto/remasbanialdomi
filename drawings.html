@@ -6,16 +6,6 @@
   <meta name="description" content="Drawings & artwork portfolio by Remas" />
   <title>Drawings — Remas</title>
   <link rel="stylesheet" href="assets/css/styles.css" />
-  <style>
-    /* Page-only polish (keeps your site design consistent) */
-    .hero-row{display:flex; gap:14px; flex-wrap:wrap; align-items:stretch;}
-    .hero-row .card{flex:1; min-width:260px;}
-    .meta-grid{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:14px;}
-    @media (max-width: 800px){ .meta-grid{grid-template-columns:1fr;} }
-    .work-list{margin:10px 0 0; padding-left:18px; color:var(--muted);}
-    .work-list li{margin:6px 0;}
-    .k{display:inline-block; padding:3px 10px; border-radius:999px; border:1px solid rgba(255,255,255,.14); background:rgba(255,255,255,.05); margin-right:8px; font-size:.9rem;}
-  </style>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -30,8 +20,8 @@
       <a data-nav href="index.html">Home</a>
       <a data-nav href="photography.html">Photography</a>
       <a data-nav href="drawings.html">Drawings</a>
-      <a data-nav href="projects.html">Projects</a>
       <a data-nav href="crafts.html">Crafts</a>
+      <a data-nav href="projects.html">Projects</a>
       <a data-nav href="resume.html">Resume</a>
     </nav>
     <button class="menu-btn" type="button" data-menu-btn aria-label="Open menu">Menu</button>
@@ -50,73 +40,28 @@
 <main id="main">
   <section class="section">
     <div class="container">
+      <h2>Drawings</h2>
+      <p>Curated work only (best 12–20 pieces). Add 1–2 sentence captions: title/medium + what you practiced (form, shading, proportion, storytelling).</p>
 
-      <div class="hero-row">
-        <div class="card">
-          <h2 style="margin:0;">Drawings & Art</h2>
-          <p class="muted" style="margin-top:10px;">
-            A curated set of original artwork focused on observation, structure, and storytelling through form.
-          </p>
-          <div style="margin-top:10px;">
-            <span class="k">Sketching</span>
-            <span class="k">Composition</span>
-            <span class="k">Detail</span>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3 style="margin-top:0;">Artist Statement</h3>
-          <p class="muted" style="margin:8px 0 0;">
-            I use drawing to study how small details create meaning—light, edges, balance, and emotion.
-            My work combines careful observation with intentional design choices to communicate a clear idea.
-            Each piece reflects patience, discipline, and a drive to improve technique.
-          </p>
-        </div>
+      <div class="btn-row">
+        <button class="btn primary" type="button" data-autoplay>Play Slideshow</button>
+        <button class="btn" type="button" data-stop>Stop</button>
       </div>
 
-      <div class="meta-grid">
-        <div class="card">
-          <h3 style="margin-top:0;">Featured Works</h3>
-          <ul class="work-list">
-            <li><strong>Piece Title 1</strong> — Pencil / Ink, 2025</li>
-            <li><strong>Piece Title 2</strong> — Graphite, 2024</li>
-            <li><strong>Piece Title 3</strong> — Mixed media, 2024</li>
-          </ul>
-          <p class="muted" style="margin-top:10px;">
-            (Replace these titles with your real ones — titles make the portfolio feel professional.)
-          </p>
-        </div>
-
-        <div class="card">
-          <h3 style="margin-top:0;">Gallery</h3>
-          <p class="muted" style="margin:8px 0 0;">
-            Click any image to view it full size. Captions include title + medium + year.
-          </p>
-          <div class="btn-row" style="margin-top:10px;">
-            <button class="btn primary" type="button" data-autoplay>Play Slideshow</button>
-            <button class="btn" type="button" data-stop>Stop</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="card" style="margin-top:14px;">
-        <h3 style="margin-top:0;">All Artwork</h3>
-        <div id="gallery" class="gallery" aria-label="Drawings gallery" style="margin-top:10px;"></div>
-      </div>
-
+      <div id="gallery" class="gallery" aria-label="Drawings gallery"></div>
     </div>
   </section>
 
   <script src="assets/js/lightbox.js"></script>
   <script>
-    // IMPORTANT: This list must match your real folder + filenames exactly.
-    // If your folder is "Drawings" (capital D), change drawings -> Drawings below.
+    // IMPORTANT: Make sure the folder name matches exactly:
+    // assets/images/drawings/  (or assets/images/Drawings/ if your folder uses a capital D)
     const images = [
-      { src:"assets/images/drawings/sample_03.jpg", caption:"Juha’s Desert Delights — Pencil, 2025", alt:"Artwork 1" },
-      { src:"assets/images/drawings/sample_03.jpg", caption:"Study of Light — Graphite, 2024", alt:"Artwork 2" },
-      { src:"assets/images/drawings/sample_03.jpg", caption:"Portrait Study — Charcoal, 2024", alt:"Artwork 3" },
-      { src:"assets/images/drawings/sample_03.jpg", caption:"Architectural Sketch — Ink, 2025", alt:"Artwork 4" },
-      { src:"assets/images/drawings/sample_03.jpg", caption:"Nature Detail Study — Pencil, 2025", alt:"Artwork 5" }
+      { src: "assets/images/drawings/sample_03.jpg", caption: "Juha’s Desert Delights — Pencil, 2025.", alt: "Pencil drawing titled Juha’s Desert Delights" },
+      { src: "assets/images/drawings/sample_03.jpg", caption: "Study of Light — Graphite, 2024.", alt: "Graphite drawing focused on light and shadow" },
+      { src: "assets/images/drawings/sample_03.jpg", caption: "Portrait Study — Charcoal, 2024.", alt: "Charcoal portrait study drawing" },
+      { src: "assets/images/drawings/sample_03.jpg", caption: "Architectural Sketch — Ink, 2025.", alt: "Ink architectural sketch drawing" },
+      { src: "assets/images/drawings/sample_03.jpg", caption: "Nature Detail Study — Pencil, 2025.", alt: "Pencil study of natural details and texture" }
     ];
 
     initGallery("gallery", images, { title: "Drawings", autoplayMs: 3400 });
@@ -125,11 +70,8 @@
 
 <footer>
   <div class="container">
-    <div style="margin-top:8px;">
-      © <span id="y"></span> Remas Sadam Bani Aldomi —
-      <a href="mailto:remasbanialdomi@gmail.com">remasbanialdomi@gmail.com</a>
-      — built with GitHub Pages
-    </div>
+    <div><strong>Tip:</strong> Keep personal details private on public sites (e.g., phone, full address, date of birth).</div>
+    <div style="margin-top:8px;">© <span id="y"></span> Remas — built with GitHub Pages</div>
   </div>
 </footer>
 
