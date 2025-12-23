@@ -49,128 +49,276 @@
   </div>
 </section>
 
-<script src="assets/js/lightbox.js"></script>
-<script>
-  const images = [
-    // --- Sample images ---
-    // --- Real images replacing sample photos ---
-// --- Sample images (same files, updated captions) ---
-    { src: "assets/images/photography/sample_01.jpg",
-      caption: "Sunburst canopy — afternoon light through autumn leaves.",
-      alt: "Sunlight shining through an autumn tree canopy"
-    },
-    { src: "assets/images/photography/sample_02.jpg",
-      caption: "Cloud drama — a wide sky over a quiet road, using contrast and leading lines.",
-      alt: "Dramatic clouds above a road lined with trees"
-    },
-    { src: "assets/images/photography/sample_04.jpg",
-      caption: "Sunset silhouette — branches framing the last pink light.",
-      alt: "Pink sunset framed by dark tree branches"
-    },
-    { src: "assets/images/photography/sample_05.jpg",
-      caption: "Still water, wide sky — calm reflections with textured clouds.",
-      alt: "Calm lake with cloud reflections under a wide sky"
-    },
-    { src: "assets/images/photography/sample_06.jpg",
-      caption: "Lakeside edge — shoreline balance and a soft horizon.",
-      alt: "Lake horizon with shoreline on the right and scattered clouds"
-    },
-    { src: "assets/images/photography/sample_07.jpg",
-      caption: "Quiet horizon — minimal composition and gentle color gradients.",
-      alt: "Wide lake horizon with soft clouds and muted evening light"
-    },
-
-
-
-    // --- Photography images (existing ones that matched) ---
-    { src: "assets/images/photography/IMG_20231001_165607505_MFNR.jpg", caption: "Boardwalk lines — strong leading perspective pulling the eye forward.", alt: "Low-angle view of a wooden boardwalk path leading forward through greenery" },
-    { src: "assets/images/photography/IMG_20231001_184433384.jpg", caption: "Open horizon — wide sky and gentle evening light creating a calm, spacious mood.", alt: "Wide landscape with trees, open sky, and distant horizon in golden light" },
-    { src: "assets/images/photography/IMG_20240511_160443801_MFNR.jpg", caption: "Study with a view — quiet focus indoors with an open landscape beyond the glass.", alt: "Notebook and pen on a table by large windows overlooking a green landscape" },
-    { src: "assets/images/photography/IMG_20240709_144211357_MFNR.jpg", caption: "Rainy reflection — raindrops and soft city lights creating a cinematic mood.", alt: "Raindrops on a window with blurred red traffic lights and a moody background" },
-    { src: "assets/images/photography/IMG_20240803_175204051.jpg", caption: "Sky and stillness — dramatic clouds and treetops turning a simple scene cinematic.", alt: "Woodland scene with tall trees and dramatic clouds in a bright sky" },
-    { src: "assets/images/photography/IMG_20241123_164837657_MFNR~2.jpg", caption: "Black-and-white eye close-up — sharp lashes, soft shadows, and a reflection that tells a story.", alt: "Black and white close-up of a human eye with detailed eyelashes" },
-    { src: "assets/images/photography/IMG_20250220_113627876_MFNR-EDIT.jpg", caption: "A snowy lakeshore framed by winter trees — soft snowfall and calm, quiet tones.", alt: "Snowy lakeshore framed by trees during light snowfall" },
-    { src: "assets/images/photography/IMG_20250220_113717836_MFNR-EDIT.jpg", caption: "Winter minimalism — dark textures and scattered snow creating natural patterns.", alt: "Abstract winter texture of dark ground with scattered snow patches" },
-    { src: "assets/images/photography/IMG_20250220_113939601_MFNR-EDIT.jpg", caption: "A snow-covered path leading to a pavilion — stillness, symmetry, and gentle contrast.", alt: "Snow-covered park path leading to a small pavilion among tall trees" },
-    { src: "assets/images/photography/IMG_20250305_164017986_MFNR-EDIT.jpg", caption: "Everyday scenery with a cinematic sky — cloud movement turning a simple moment into a scene.", alt: "Dramatic clouds over a neighborhood with trees and power lines" },
-    { src: "assets/images/photography/IMG_20250312_143424710_MFNR-EDIT.jpg", caption: "Spring blossoms against red brick — clean contrast and a crisp seasonal mood.", alt: "White blossoms on a tree in front of a red brick building" },
-    { src: "assets/images/photography/Messenger_creation_1108637024638325-EDIT.jpg", caption: "Desert scale and layers — rock, sand, and people in a wide frame that shows the place’s magnitude.", alt: "Wide desert landscape with rock formations, vehicles, and people" },
-    { src: "assets/images/photography/Screenshot_20250414-111118.png", caption: "Modern interior lines and greenery — geometry, texture, and soft lighting in one frame.", alt: "Modern restaurant interior with wood panels and hanging greenery" },
-    { src: "assets/images/photography/Screenshot_20250414-112030-EDIT.jpg", caption: "Sunflowers from above — low light and grain giving the moment a dreamy, nostalgic feel.", alt: "Top-down view of a sunflower bouquet held above the ground at night" },
-    { src: "assets/images/photography/received_1019617689718728-EDIT.jpg", caption: "Soft portrait lighting — natural tones blending with the background.", alt: "Warm-toned portrait with soft focus" },
-    { src: "assets/images/photography/received_1207117630903266-EDIT.jpg", caption: "Dreamlike color palette — muted shadows and ambient tones create mood.", alt: "Pastel-colored artistic photo with blurred depth" },
-
-    // --- Newly added files ---
-    { src: "assets/images/photography/IMG_20230412_125027186_MFNR.jpg", caption: "Morning light reflections — capturing geometric lines with subtle highlights.", alt: "Abstract reflection and shadow in soft light" },
-    { src: "assets/images/photography/IMG_20230412_125051243_MFNR.jpg", caption: "Close-up composition — focus on contrast and soft textures.", alt: "Minimalist close-up of light and shadow" },
-    { src: "assets/images/photography/IMG_20230412_172843797_MFNR.jpg", caption: "Evening light and natural framing — warm tones over quiet landscapes.", alt: "Landscape at sunset with soft horizon" },
-    { src: "assets/images/photography/IMG_20230527_060832627_MFNR~3.jpg", caption: "Early sunrise scene — fresh morning tones and crisp air.", alt: "Sunrise over gentle hills" },
-    { src: "assets/images/photography/IMG_20230622_164432778_MFNR.jpg", caption: "Green canopy — trees and sky in layered symmetry.", alt: "Tree canopy under blue sky" },
-    { src: "assets/images/photography/IMG_20230703_190228622.jpg", caption: "Ancient structure — history meets nature in evening light.", alt: "Old stone wall against a bright sky" },
-    { src: "assets/images/photography/IMG_20230717_135830544_MFNR.jpg", caption: "Above the clouds — calm sky and sunlight across mountain edges.", alt: "Aerial view over mountains and coastlines" },
-    { src: "assets/images/photography/IMG_20230717_135924916_MFNR.jpg", caption: "Island and horizon — deep blue layers and soft gradients.", alt: "Aerial coastal scene with islands and blue sea" },
-    { src: "assets/images/photography/IMG_20230717_140135320_MFNR.jpg", caption: "Wings and world below — flight perspective capturing curvature of Earth.", alt: "View from airplane window showing wing and coastline" },
-    { src: "assets/images/photography/IMG_20230718_194930366_MFNR.jpg", caption: "Evening sculpture — golden light and shadow contrast on art installation.", alt: "Outdoor sculpture at dusk with people nearby" },
-    { src: "assets/images/photography/IMG_20230718_200042357_MFNR.jpg", caption: "Architectural reflection — modern lines mirrored on still water.", alt: "Building reflected in evening light" },
-    { src: "assets/images/photography/IMG_20230815_194730890.jpg", caption: "Golden hour garden — balanced color and tranquil reflections.", alt: "Park scene with lake and pavilion at sunset" },
-    { src: "assets/images/photography/IMG_20230819_201310103_MFNR.jpg", caption: "Rainbow over rooftops — fleeting beauty after the rain.", alt: "Rainbow appearing above buildings and trees" },
-    { src: "assets/images/photography/IMG_20230819_202817181.jpg", caption: "Evening boardwalk — fading light reflecting on still water.", alt: "Wooden path by water at sunset" },
-    { src: "assets/images/photography/IMG_20230820_181316261.jpg", caption: "Calm waterside — nature and architecture in soft balance.", alt: "Gazebo and trees reflected on a lake" },
-    { src: "assets/images/photography/IMG_20250821_132451472_MFNR-EDIT.jpg", caption: "Seasonal transition — late-summer tones with depth and motion.", alt: "Tree branches and light haze in warm tones" },
-    { src: "assets/images/photography/IMG_20250901_123239419_MFNR.jpg", caption: "Soft daylight landscape — balance of green and open air.", alt: "Distant hills under soft sky" },
-    { src: "assets/images/photography/IMG_20250910_091408702_HDR.jpg", caption: "Morning contrast — bright highlights meeting strong shadow tones.", alt: "Outdoor scene with sunlight breaking through trees" },
-    { src: "assets/images/photography/Snapchat-2119587892.jpg", caption: "Spontaneous capture — candid color and energy.", alt: "Candid moment captured on phone" },
-    { src: "assets/images/photography/Snapchat-631854748.jpg", caption: "Soft tones and smile — unposed expression with warmth.", alt: "Candid portrait with natural lighting" }
-    {src: "assets/images/photography/IMG_20231001_184447712.jpg",
-      alt: "Close-up of a yellow flower held in hand with a softly blurred landscape in the background",
-      caption: "Held in focus — a single yellow bloom stands out against a soft, dreamy background."
-    },
-    {
-      src: "assets/images/photography/IMG_20231001_185052011_MFNR.jpg",
-      alt: "Wooded path with tall trees under a bright sky, creating a calm natural scene",
-      caption: "Quiet path — tall trees and open sky create a peaceful, grounded mood."
-    },
-    {
-      src: "assets/images/photography/IMG_20231211_141453278_MFNR-EDIT.jpg",
-      alt: "Walkway framed by trees and blossoms, forming a natural corridor",
-      caption: "Blossom corridor — spring color frames the walkway and invites the viewer forward."
-    },
-    {
-      src: "assets/images/photography/IMG_20240401_141339533.jpg",
-      alt: "Wide view of a garden walkway with blooming trees and landscaped greenery",
-      caption: "Spring walk — depth and symmetry with fresh seasonal color and clean leading lines."
-    },
-    {
-      src: "assets/images/photography/IMG_20240403_141442695_MFNR-EDIT.jpg",
-      alt: "Wooden staircase leading upward into tall pine trees with sunlight filtering through",
-      caption: "Upward trail — steps and vertical trees create strong perspective and airy backlight."
-    },
-    {
-      src: "assets/images/photography/20251221_OHR.SwedenSolstice_EN-US5470044971_UHD_bing.jpg",
-      alt: "Winter forest at sunrise with warm sunlight shining through frosted trees",
-      caption: "Winter sunrise — warm light cutting through cold textures for a strong seasonal contrast."
-    },
-    {
-      src: "assets/images/photography/IMG_7886.jpg",
-      alt: "Hand holding a stick near a small fire in a metal fire pit",
-      caption: "Building the fire — a warm, timed moment that captures action and human presence."
-    },
-    {
-      src: "assets/images/photography/IMG_7874.jpg",
-      alt: "Glowing embers and wood in a fire pit with smoke rising",
-      caption: "Embers and smoke — close-up texture and heat, focusing on small details."
-    }
 
 
 
 
 
   
+<script src="assets/js/lightbox.js"></script>
+<script>
+  const images = [
+    // --- Sample images (updated captions) ---
+    {
+      src: "assets/images/photography/sample_01.jpg",
+      caption: "Sunburst canopy — afternoon light through autumn leaves.",
+      alt: "Sunlight shining through an autumn tree canopy"
+    },
+    {
+      src: "assets/images/photography/sample_02.jpg",
+      caption: "Cloud drama — a wide sky over a quiet road, using contrast and leading lines.",
+      alt: "Dramatic clouds above a road lined with trees"
+    },
+    {
+      src: "assets/images/photography/sample_04.jpg",
+      caption: "Sunset silhouette — branches framing the last pink light.",
+      alt: "Pink sunset framed by dark tree branches"
+    },
+    {
+      src: "assets/images/photography/sample_05.jpg",
+      caption: "Still water, wide sky — calm reflections with textured clouds.",
+      alt: "Calm lake with cloud reflections under a wide sky"
+    },
+    {
+      src: "assets/images/photography/sample_06.jpg",
+      caption: "Lakeside edge — shoreline balance and a soft horizon.",
+      alt: "Lake horizon with shoreline on the right and scattered clouds"
+    },
+    {
+      src: "assets/images/photography/sample_07.jpg",
+      caption: "Quiet horizon — minimal composition and gentle color gradients.",
+      alt: "Wide lake horizon with soft clouds and muted evening light"
+    },
+
+    // --- Real images (all cleaned, no duplicates, correct commas) ---
+    {
+      src: "assets/images/photography/IMG_20230412_125027186_MFNR.jpg",
+      caption: "Morning light reflections — geometric lines with subtle highlights.",
+      alt: "Abstract reflection and shadow in soft light"
+    },
+    {
+      src: "assets/images/photography/IMG_20230412_125051243_MFNR.jpg",
+      caption: "Close-up composition — contrast and soft textures in a minimalist frame.",
+      alt: "Minimalist close-up of light and shadow"
+    },
+    {
+      src: "assets/images/photography/IMG_20230412_172843797_MFNR.jpg",
+      caption: "Warm evening tones — natural framing over a quiet landscape.",
+      alt: "Landscape scene in warm evening light"
+    },
+    {
+      src: "assets/images/photography/IMG_20230527_060832627_MFNR~3.jpg",
+      caption: "Early sunrise mood — crisp light and calm colors to start the day.",
+      alt: "Soft sunrise colors over a quiet landscape"
+    },
+    {
+      src: "assets/images/photography/IMG_20230622_164432778_MFNR.jpg",
+      caption: "Green canopy — layered branches and sky creating natural symmetry.",
+      alt: "Tree canopy against a blue sky"
+    },
+    {
+      src: "assets/images/photography/IMG_20230703_190228622.jpg",
+      caption: "History in light — an old structure meeting a bright evening sky.",
+      alt: "Old stone structure against a bright sky"
+    },
+    {
+      src: "assets/images/photography/IMG_20230717_135830544_MFNR.jpg",
+      caption: "Above the clouds — calm sky and sunlight across distant land and water.",
+      alt: "Aerial view of coastline and clouds from above"
+    },
+    {
+      src: "assets/images/photography/IMG_20230717_135924916_MFNR.jpg",
+      caption: "Blue layers — islands and horizon fading into soft distance.",
+      alt: "Aerial coastal view with islands and blue water"
+    },
+    {
+      src: "assets/images/photography/IMG_20230717_140135320_MFNR.jpg",
+      caption: "Airplane window view — the wing framing the world below.",
+      alt: "Airplane wing with coastline visible below"
+    },
+    {
+      src: "assets/images/photography/IMG_20230718_194930366_MFNR.jpg",
+      caption: "Golden-hour scene — light and shadow shaping an outdoor moment.",
+      alt: "Outdoor scene at dusk with warm light and shadows"
+    },
+    {
+      src: "assets/images/photography/IMG_20230718_200042357_MFNR.jpg",
+      caption: "Modern reflection — clean architecture mirrored in still water.",
+      alt: "Building reflected in calm water"
+    },
+    {
+      src: "assets/images/photography/IMG_20230815_194730890.jpg",
+      caption: "Golden hour by the water — peaceful reflections and balanced color.",
+      alt: "Park lake scene at sunset with reflections"
+    },
+    {
+      src: "assets/images/photography/IMG_20230819_201310103_MFNR.jpg",
+      caption: "After the rain — a rainbow appearing over rooftops and trees.",
+      alt: "Rainbow over buildings and trees"
+    },
+    {
+      src: "assets/images/photography/IMG_20230819_202817181.jpg",
+      caption: "Evening boardwalk — fading light and calm water beside the path.",
+      alt: "Boardwalk path beside water at dusk"
+    },
+    {
+      src: "assets/images/photography/IMG_20230820_181316261.jpg",
+      caption: "Waterside balance — nature and structure reflected in a calm lake.",
+      alt: "Gazebo and trees reflected on a lake"
+    },
+    {
+      src: "assets/images/photography/IMG_20231001_165607505_MFNR.jpg",
+      caption: "Boardwalk lines — strong leading perspective pulling the eye forward.",
+      alt: "Low-angle view of a wooden boardwalk path leading forward through greenery"
+    },
+    {
+      src: "assets/images/photography/IMG_20231001_184433384.jpg",
+      caption: "Open horizon — wide sky and gentle evening light creating a calm mood.",
+      alt: "Wide landscape with open sky and distant horizon in soft light"
+    },
+    {
+      src: "assets/images/photography/IMG_20231001_184447712.jpg",
+      caption: "Held in focus — a single yellow bloom against a soft, dreamy background.",
+      alt: "Close-up of a yellow flower held in hand with a blurred landscape behind"
+    },
+    {
+      src: "assets/images/photography/IMG_20231001_185052011_MFNR.jpg",
+      caption: "Quiet path — tall trees and open sky create a peaceful, grounded scene.",
+      alt: "Wooded path with tall trees under a bright sky"
+    },
+    {
+      src: "assets/images/photography/IMG_20231211_141453278_MFNR-EDIT.jpg",
+      caption: "Blossom corridor — spring color frames the walkway and invites you forward.",
+      alt: "Walkway framed by blossoming trees forming a natural corridor"
+    },
+    {
+      src: "assets/images/photography/IMG_20240401_141339533.jpg",
+      caption: "Spring walk — depth, symmetry, and fresh seasonal color in one frame.",
+      alt: "Garden walkway with blooming trees and landscaped greenery"
+    },
+    {
+      src: "assets/images/photography/IMG_20240403_141442695_MFNR-EDIT.jpg",
+      caption: "Upward trail — steps into tall pines with bright backlight and perspective.",
+      alt: "Wooden staircase leading upward into tall pine trees with sunlight"
+    },
+    {
+      src: "assets/images/photography/IMG_20240511_160443801_MFNR.jpg",
+      caption: "Study with a view — quiet focus indoors with green scenery outside.",
+      alt: "Notebook and pen by large windows overlooking a green landscape"
+    },
+    {
+      src: "assets/images/photography/IMG_20240709_144211357_MFNR.jpg",
+      caption: "Rainy reflection — raindrops and soft city lights creating a cinematic mood.",
+      alt: "Raindrops on a window with blurred red traffic lights in the background"
+    },
+    {
+      src: "assets/images/photography/IMG_20240803_175204051.jpg",
+      caption: "Sky and stillness — dramatic clouds and treetops turning a simple scene cinematic.",
+      alt: "Tall trees beneath a dramatic cloudy sky"
+    },
+    {
+      src: "assets/images/photography/IMG_20241123_164837657_MFNR~2.jpg",
+      caption: "Black-and-white eye close-up — sharp lashes and soft shadows with a story-like reflection.",
+      alt: "Black-and-white close-up of an eye with detailed eyelashes"
+    },
+    {
+      src: "assets/images/photography/IMG_20250220_113627876_MFNR-EDIT.jpg",
+      caption: "Snowy lakeshore — winter trees framing calm water and soft tones.",
+      alt: "Snowy lakeshore framed by trees in winter"
+    },
+    {
+      src: "assets/images/photography/IMG_20250220_113717836_MFNR-EDIT.jpg",
+      caption: "Winter minimalism — dark textures and scattered snow forming natural patterns.",
+      alt: "Dark ground with scattered snow patches forming abstract patterns"
+    },
+    {
+      src: "assets/images/photography/IMG_20250220_113939601_MFNR-EDIT.jpg",
+      caption: "Path to the pavilion — stillness, symmetry, and gentle contrast in snow.",
+      alt: "Snow-covered path leading to a small pavilion among tall trees"
+    },
+    {
+      src: "assets/images/photography/IMG_20250305_164017986_MFNR-EDIT.jpg",
+      caption: "Cinematic sky — cloud movement making an everyday view feel like a scene.",
+      alt: "Dramatic clouds over a neighborhood with trees and power lines"
+    },
+    {
+      src: "assets/images/photography/IMG_20250312_143424710_MFNR-EDIT.jpg",
+      caption: "Spring blossoms — clean contrast of white flowers against red brick.",
+      alt: "White blossoms on a tree in front of a red brick building"
+    },
+    {
+      src: "assets/images/photography/Screenshot_20250414-112030-EDIT.jpg",
+      caption: "Sunflowers from above — low light and grain for a dreamy, nostalgic feel.",
+      alt: "Top-down view of a sunflower bouquet held above the ground at night"
+    },
+    {
+      src: "assets/images/photography/Screenshot_20250414-111118.png",
+      caption: "Modern interior — clean lines, greenery, and soft lighting in one frame.",
+      alt: "Modern restaurant interior with wood panels and hanging greenery"
+    },
+    {
+      src: "assets/images/photography/Messenger_creation_1108637024638325-EDIT.jpg",
+      caption: "Desert scale — wide framing that shows rock, sand, and people in layers.",
+      alt: "Wide desert landscape with rock formations, vehicles, and people"
+    },
+    {
+      src: "assets/images/photography/received_1019617689718728-EDIT.jpg",
+      caption: "Soft portrait lighting — warm tones and gentle focus for a calm mood.",
+      alt: "Softly lit portrait with warm tones"
+    },
+    {
+      src: "assets/images/photography/received_1207117630903266-EDIT.jpg",
+      caption: "Dreamlike tones — muted colors and soft shadows building atmosphere.",
+      alt: "Photo with muted pastel tones and soft shadows"
+    },
+    {
+      src: "assets/images/photography/IMG_20250821_132451472_MFNR-EDIT.jpg",
+      caption: "Season shift — late-summer light with depth and motion in the branches.",
+      alt: "Tree branches in warm light with slight haze"
+    },
+    {
+      src: "assets/images/photography/IMG_20250901_123239419_MFNR.jpg",
+      caption: "Soft daylight landscape — open air, gentle greens, and relaxed balance.",
+      alt: "Landscape with greenery under a soft sky"
+    },
+    {
+      src: "assets/images/photography/IMG_20250910_091408702_HDR.jpg",
+      caption: "HDR contrast — bright highlights and deep shadows shaping the scene.",
+      alt: "Outdoor scene with strong sunlight and deep shadows"
+    },
+    {
+      src: "assets/images/photography/Snapchat-2119587892.jpg",
+      caption: "Spontaneous capture — quick color and energy in a candid moment.",
+      alt: "Candid phone photo with lively colors"
+    },
+    {
+      src: "assets/images/photography/Snapchat-631854748.jpg",
+      caption: "Natural smile — warm, unposed portrait in soft light.",
+      alt: "Candid portrait with natural lighting"
+    },
+    {
+      src: "assets/images/photography/20251221_OHR.SwedenSolstice_EN-US5470044971_UHD_bing.jpg",
+      caption: "Winter sunrise — warm light through frosted trees for strong contrast.",
+      alt: "Winter forest at sunrise with sunlight shining through frosted trees"
+    },
+    {
+      src: "assets/images/photography/IMG_7886.jpg",
+      caption: "Building the fire — action and warmth captured in a timed moment.",
+      alt: "Hand holding a stick near a small fire in a metal fire pit"
+    },
+    {
+      src: "assets/images/photography/IMG_7874.jpg",
+      caption: "Embers and smoke — close-up texture, heat, and rising haze.",
+      alt: "Glowing embers and wood in a fire pit with smoke rising"
+    }
   ];
 
   initGallery("gallery", images, { title: "Photography", autoplayMs: 3200 });
 </script>
 
+
+
+  
 </main>
 
 <footer>
