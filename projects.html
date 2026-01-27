@@ -52,18 +52,6 @@
     }
     .toc a:hover{background: rgba(255,255,255,.08);}
 
-    .kpi{display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:12px;}
-    @media (max-width: 900px){ .kpi{grid-template-columns:1fr;} }
-    .kpi .box{
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.04);
-      border-radius:16px;
-      padding:10px 12px;
-    }
-    .kpi .label{font-size:.85rem; color: rgba(255,255,255,.72);}
-    .kpi .value{font-weight:800; margin-top:4px;}
-
-    /* ✅ The “prestige” upgrade: a clean header grid for each project */
     .four-up{display:grid; grid-template-columns:repeat(2,1fr); gap:12px; margin-top:12px;}
     @media (max-width: 900px){ .four-up{grid-template-columns:1fr;} }
     .tile{
@@ -91,19 +79,7 @@
     .bullets{margin:8px 0 0; padding-left:18px;}
     .bullets li{margin:6px 0;}
 
-    .note{border-left:3px solid rgba(255,255,255,.18); padding-left:10px; margin-top:10px;}
     .mono{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;}
-    .quiet{opacity:.9;}
-
-    /* Optional: subtle callout for “Key Takeaway” */
-    .takeaway{
-      margin-top:12px;
-      border:1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.05);
-      border-radius:16px;
-      padding:10px 12px;
-    }
-    .takeaway strong{display:block; margin-bottom:6px;}
   </style>
 </head>
 
@@ -143,13 +119,12 @@
   <section class="section">
     <div class="container">
 
-      <!-- ===== Intro ===== -->
+      <!-- Intro -->
       <div class="hero-row">
         <div class="card">
           <h2 style="margin:0;">Projects & Research</h2>
           <p class="muted" style="margin-top:10px;">
-            This page is designed for selective review: a clear overview first, then deeper detail.
-            I focus on <strong>evidence</strong>, <strong>structured thinking</strong>, and <strong>reflection</strong>—the same way strong programs evaluate work.
+            A selection of projects that show my research, writing, and problem solving across health, STEM, and academic work.
           </p>
 
           <div class="tag-row" aria-label="Focus areas">
@@ -165,11 +140,9 @@
             <a href="#conics">Conics (MAT 172)</a>
           </div>
         </div>
+      </div>
 
-  
-      <!-- ========================= -->
-      <!-- TURNER SYNDROME PROJECT   -->
-      <!-- ========================= -->
+      <!-- TURNER -->
       <div class="card" id="turner" style="margin-top:14px;">
         <div class="project-grid">
           <div>
@@ -185,7 +158,7 @@
             <div class="four-up" aria-label="Project summary">
               <div class="tile">
                 <h4>Goal</h4>
-                <p class="mini">Explain Turner syndrome using a patient-centered case story and accurate medical evidence.</p>
+                <p class="mini">Explain Turner syndrome using a patient centered case story and accurate medical evidence.</p>
               </div>
               <div class="tile">
                 <h4>Approach</h4>
@@ -193,68 +166,71 @@
               </div>
               <div class="tile">
                 <h4>Outcome</h4>
-                <p class="mini">A structured presentation outline with clear definitions, complications, diagnosis, and treatment.</p>
+                <p class="mini">A structured presentation outline with definitions, complications, diagnosis, and treatment.</p>
               </div>
               <div class="tile">
                 <h4>Reflection</h4>
-                <p class="mini">This strengthened my interest in medicine by connecting genetics to real monitoring and care decisions.</p>
+                <p class="mini">This strengthened my interest in medicine by connecting genetics to real care decisions and long term monitoring.</p>
               </div>
-            </div>
-
-            <div class="takeaway">
-              <strong>Key takeaway (why it matters)</strong>
-              <p class="mini quiet" style="margin:0;">
-                I learned how to translate complex genetic information into language that a general audience can understand—without losing accuracy.
-              </p>
             </div>
 
             <div class="divider"></div>
             <p class="mini" style="margin:0;">
-              Evidence image: <span class="mono">assets/Projects%20and%20Research/turner.png</span>
+              Image: <span class="mono">assets/Projects%20and%20Research/turner.png</span>
             </p>
 
-            <!-- Keep detail, but make it clean -->
             <details class="accordion" open>
-              <summary>Case Summary: “Meet Sara”</summary>
+              <summary>Meet Sara: A Girl with Turner Syndrome</summary>
               <ul class="bullets mini">
-                <li>Sara is a 10-year-old girl who has always been the shortest in her class.</li>
-                <li>She gets tired easily and has frequent ear infections.</li>
-                <li>Her doctor hears a heart murmur and notices slow growth.</li>
-                <li>A karyotype test shows <strong>45,X</strong>, confirming Turner syndrome.</li>
+                <li>Sara is a 10 year old girl who has always been the shortest in her class</li>
+                <li>She gets tired easily and has frequent ear infections</li>
+                <li>Her doctor hears a heart murmur and worries about her slow growth</li>
+                <li>A karyotype test shows 45,X, which confirms Turner syndrome</li>
               </ul>
             </details>
 
             <details class="accordion">
-              <summary>Clinical Features & Complications</summary>
+              <summary>Clinical Features and Complications</summary>
               <ul class="bullets mini">
                 <li>Short stature and slow growth</li>
-                <li>Webbed neck, low-set ears, broad chest, swelling of hands/feet at birth</li>
+                <li>Webbed neck, low set ears, broad chest, swelling of hands and feet at birth</li>
                 <li>Delayed puberty, no periods, infertility</li>
-                <li>Heart conditions (bicuspid aortic valve, coarctation of the aorta)</li>
-                <li>Kidney differences, thyroid disease, recurrent ear infections and hearing loss</li>
-                <li>Long-term risks: high blood pressure, aortic enlargement, osteoporosis, diabetes, high cholesterol</li>
+                <li>Heart problems such as bicuspid aortic valve and coarctation of the aorta</li>
+                <li>Kidney differences, thyroid disease, frequent ear infections and hearing loss</li>
+                <li>Long term: high blood pressure, aortic enlargement, osteoporosis, diabetes, high cholesterol</li>
               </ul>
             </details>
 
             <details class="accordion">
-              <summary>Cause, Diagnosis, and Treatment (High-Yield)</summary>
+              <summary>What Causes Turner Syndrome</summary>
               <ul class="bullets mini">
-                <li><strong>Cause:</strong> all or part of one X chromosome is missing (most commonly 45,X; sometimes mosaic forms).</li>
-                <li><strong>Diagnosis:</strong> prenatal ultrasound clues + CVS/amniocentesis; after birth confirmed by blood karyotype.</li>
-                <li><strong>Treatment:</strong> growth hormone, estrogen/progesterone therapy, and regular heart/kidney/thyroid/hearing monitoring.</li>
-                <li><strong>Support:</strong> foundations and support groups provide education, advocacy, and research updates.</li>
+                <li>Turner syndrome occurs when all or part of one X chromosome is missing</li>
+                <li>Most common pattern: 45,X (monosomy X)</li>
+                <li>Mosaic cases: 45,X / 46,XX</li>
+                <li>Can also involve structural changes in the X chromosome</li>
+                <li>Happens by chance during meiosis or early embryo cell division</li>
+                <li>Not caused by anything parents did</li>
               </ul>
             </details>
 
             <details class="accordion">
-              <summary>Works Cited (Selected)</summary>
+              <summary>Diagnosis and Treatment</summary>
               <ul class="bullets mini">
-                <li>MedlinePlus Genetics (U.S. National Library of Medicine)</li>
-                <li>GARD (NCATS)</li>
-                <li>Cleveland Clinic</li>
-                <li>Genome.gov (NHGRI)</li>
-                <li>Turner Syndrome Foundation</li>
-                <li>Mayo Clinic</li>
+                <li><strong>Diagnosis:</strong> ultrasound clues, CVS or amniocentesis, confirmed by karyotype blood test</li>
+                <li><strong>Treatment:</strong> growth hormone, estrogen and later progesterone therapy, regular heart and hearing monitoring</li>
+                <li><strong>Support:</strong> Turner Syndrome Foundation and Turner Syndrome Society of the United States</li>
+              </ul>
+            </details>
+
+            <details class="accordion">
+              <summary>Works Cited</summary>
+              <ul class="bullets mini">
+                <li>MedlinePlus Genetics. Turner Syndrome. U.S. National Library of Medicine, 2023.</li>
+                <li>Genetic and Rare Diseases Information Center (GARD). Turner Syndrome. NCATS.</li>
+                <li>Cleveland Clinic. Turner Syndrome. Cleveland Clinic Health Library.</li>
+                <li>Genome.gov. About Turner Syndrome. National Human Genome Research Institute.</li>
+                <li>Turner Syndrome Foundation. Turner Syndrome.</li>
+                <li>Mayo Clinic. Turner Syndrome, Diagnosis and Treatment.</li>
               </ul>
             </details>
           </div>
@@ -265,9 +241,7 @@
         </div>
       </div>
 
-      <!-- ========================= -->
-      <!-- PATIENT HANDOFFS PROJECT  -->
-      <!-- ========================= -->
+      <!-- HANDOFFS -->
       <div class="card" id="handoffs" style="margin-top:14px;">
         <div class="project-grid">
           <div>
@@ -275,7 +249,7 @@
               <h3 style="margin-top:0;">Unsafe Patient Handoffs in Hospitals</h3>
               <div class="proj-badges" aria-label="Project badges">
                 <span class="badge2">Patient Safety</span>
-                <span class="badge2">Evidence-Based Writing</span>
+                <span class="badge2">Evidence Based Writing</span>
                 <span class="badge2">ENG 112</span>
               </div>
             </div>
@@ -283,53 +257,47 @@
             <div class="four-up" aria-label="Project summary">
               <div class="tile">
                 <h4>Goal</h4>
-                <p class="mini">Explain why unsafe handoffs cause preventable harm and how hospitals can reduce that risk.</p>
+                <p class="mini">Explain how unsafe handoffs cause preventable harm and propose solutions.</p>
               </div>
               <div class="tile">
                 <h4>Approach</h4>
-                <p class="mini">I synthesized research, compared solutions, and built a clear framework (problem → causes → interventions).</p>
+                <p class="mini">I researched published studies, summarized key findings, and organized solutions into a clear framework.</p>
               </div>
               <div class="tile">
                 <h4>Outcome</h4>
-                <p class="mini">A research-driven argument supporting structured models (I-PASS / SBAR), training, and EHR supports.</p>
+                <p class="mini">A full research paper and a presentation summary focused on I PASS, SBAR, and training tools.</p>
               </div>
               <div class="tile">
                 <h4>Reflection</h4>
-                <p class="mini">This showed me how system design and communication directly affect patient outcomes.</p>
+                <p class="mini">This project showed me how communication systems can affect real patient outcomes.</p>
               </div>
-            </div>
-
-            <div class="takeaway">
-              <strong>Key takeaway (why it matters)</strong>
-              <p class="mini quiet" style="margin:0;">
-                Safety improves when communication is engineered—standardized, practiced, and supported—rather than left to memory or habit.
-              </p>
             </div>
 
             <div class="divider"></div>
             <p class="mini" style="margin:0;">
-              Evidence image: <span class="mono">assets/Projects%20and%20Research/patient.png</span>
+              Image: <span class="mono">assets/Projects%20and%20Research/patient.png</span>
             </p>
 
             <details class="accordion" open>
-              <summary>Presentation Highlights (Quick Review)</summary>
+              <summary>Presentation Highlights</summary>
               <ul class="bullets mini">
-                <li>Handoff = transfer of responsibility (shift changes, unit transfers, team transitions).</li>
-                <li>Missing information can lead to delays, wrong decisions, and preventable harm.</li>
-                <li>Structured tools like <strong>I-PASS</strong> reduce errors and harmful events.</li>
-                <li>Main causes: workload pressure, lack of standard format, limited training, fragmented documentation.</li>
-                <li>Solutions: I-PASS/SBAR + training & simulation + EHR templates + safety culture.</li>
+                <li>A handoff is the transfer of responsibility for a patient, like shift changes and unit transfers</li>
+                <li>Missing information can lead to delays, wrong decisions, and preventable harm</li>
+                <li>I PASS reduced errors and harmful events (Starmer et al., 2014)</li>
+                <li>Main causes include workload pressure, lack of a standard format, limited training, and fragmented documentation</li>
+                <li>Solutions include I PASS or SBAR, training and simulation, and digital templates</li>
               </ul>
             </details>
 
             <details class="accordion">
-              <summary>References (Selected)</summary>
+              <summary>References</summary>
               <ul class="bullets mini">
-                <li>Starmer et al. (2014) — New England Journal of Medicine</li>
-                <li>AHRQ (2019) — SBAR technique for communication</li>
-                <li>Manser & Foster (2020) — International Journal for Quality in Health Care</li>
-                <li>Müller et al. (2018) — BMC Medical Education</li>
-                <li>Tam et al. (2018) — PLOS ONE</li>
+                <li>Abraham et al. (2013). Journal of the American Medical Informatics Association.</li>
+                <li>AHRQ (2019). SBAR technique for communication.</li>
+                <li>Manser and Foster (2020). International Journal for Quality in Health Care.</li>
+                <li>Müller et al. (2018). BMC Medical Education.</li>
+                <li>Starmer et al. (2014). New England Journal of Medicine.</li>
+                <li>Tam et al. (2018). PLOS ONE.</li>
               </ul>
             </details>
           </div>
@@ -340,9 +308,7 @@
         </div>
       </div>
 
-      <!-- ========================= -->
-      <!-- CONICS PROJECT            -->
-      <!-- ========================= -->
+      <!-- CONICS -->
       <div class="card" id="conics" style="margin-top:14px;">
         <div class="project-grid">
           <div>
@@ -362,35 +328,29 @@
               </div>
               <div class="tile">
                 <h4>Approach</h4>
-                <p class="mini">I observed objects, measured dimensions, and translated those measurements into standard forms.</p>
+                <p class="mini">I observed objects, measured dimensions, and derived the equations.</p>
               </div>
               <div class="tile">
                 <h4>Outcome</h4>
-                <p class="mini">Concrete examples + equation work showing how circles and ellipses appear in real life.</p>
+                <p class="mini">Examples of circle, ellipse, parabola, line, and hyperbola with equation work.</p>
               </div>
               <div class="tile">
                 <h4>Reflection</h4>
-                <p class="mini">I learned that formulas become easier when they represent something measurable and real.</p>
+                <p class="mini">This helped me see math as something real, not just formulas.</p>
               </div>
-            </div>
-
-            <div class="takeaway">
-              <strong>Key takeaway (why it matters)</strong>
-              <p class="mini quiet" style="margin:0;">
-                Modeling is a bridge: you start with a real object, measure it, and end with a mathematical description that matches reality.
-              </p>
             </div>
 
             <div class="divider"></div>
             <p class="mini" style="margin:0;">
-              Evidence image: <span class="mono">assets/Projects%20and%20Research/conic.png</span>
+              Image: <span class="mono">assets/Projects%20and%20Research/conic.png</span>
             </p>
 
             <details class="accordion" open>
               <summary>Introduction</summary>
               <p class="mini" style="margin-top:8px;">
-                Conic sections appear everywhere—bowls, glasses, trays, and tubes. This project helped me connect
-                the shapes I see to the equations I learn in class.
+                Conic sections appear everywhere in real life, not just in math class. Objects like bowls, glasses,
+                containers, and tubes create circles, ellipses, parabolas, and hyperbolas. This project helped me
+                recognize these shapes around my home and connect them to equations.
               </p>
             </details>
 
@@ -401,41 +361,32 @@
                 <li><strong>Parabola:</strong> tray curve</li>
                 <li><strong>Ellipse:</strong> tilted glass opening</li>
                 <li><strong>Line:</strong> door frame edge</li>
-                <li><strong>Hyperbola:</strong> bottle/tube sides</li>
+                <li><strong>Hyperbola:</strong> bottle or tube sides</li>
               </ul>
             </details>
 
             <details class="accordion">
-              <summary>Equations (Make sure your numbers match)</summary>
-              <p class="mini" style="margin-top:8px;">
-                If the radius is <strong>10 cm</strong>, then the circle equation would be:
-                <span class="mono">x² + y² = 100</span>.
-                <br>
-                If your final equation is <span class="mono">x² + y² = 49</span>, then the radius is <strong>7</strong>.
-              </p>
-              <p class="mini note" style="margin-top:10px;">
-                For a competitive portfolio, consistency matters. Pick one set of measurements and keep the equation consistent.
-              </p>
-            </details>
+              <summary>Equations</summary>
+              <div class="mini" style="margin-top:8px;">
+                <p><strong>Circle</strong></p>
+                <ul class="bullets">
+                  <li>Equation form: x<sup>2</sup> + y<sup>2</sup> = r<sup>2</sup></li>
+                  <li>Use the radius you measured so the final equation matches your numbers</li>
+                </ul>
 
+                <p style="margin-top:10px;"><strong>Ellipse</strong></p>
+                <ul class="bullets">
+                  <li>Equation form: x<sup>2</sup>/a<sup>2</sup> + y<sup>2</sup>/b<sup>2</sup> = 1</li>
+                  <li>Use your measured major and minor axes to compute a and b</li>
+                </ul>
+              </div>
+            </details>
           </div>
 
           <div class="media" aria-label="Project media">
             <img src="assets/Projects%20and%20Research/conic.png" alt="Conics project image">
           </div>
         </div>
-      </div>
-
-      <!-- ===== Small credibility footer note ===== -->
-      <div class="card" style="margin-top:14px;">
-        <h3 style="margin-top:0;">Evidence Files Used on This Page</h3>
-        <p class="muted" style="margin:8px 0 0;">
-          Images are stored in <span class="mono">assets/Projects and Research/</span>.
-          This page uses URL encoding for the space: <span class="mono">Projects%20and%20Research</span>.
-        </p>
-        <p class="mini" style="margin-top:10px;">
-          <span class="mono">turner.png</span> • <span class="mono">patient.png</span> • <span class="mono">conic.png</span>
-        </p>
       </div>
 
     </div>
@@ -445,9 +396,9 @@
 <footer>
   <div class="container">
     <div style="margin-top:8px;">
-      © <span id="y"></span> Remas Sadam Bani Aldomi —
+      © <span id="y"></span> Remas Sadam Bani Aldomi
       <a href="mailto:remasbanialdomi@gmail.com">remasbanialdomi@gmail.com</a>
-      — built with GitHub Pages
+      built with GitHub Pages
     </div>
   </div>
 </footer>
