@@ -6,26 +6,26 @@
   <meta name="description" content="Projects & research portfolio for Remas" />
   <title>Projects — Remas</title>
   <link rel="stylesheet" href="assets/css/styles.css" />
+
   <style>
     .hero-row{display:flex; gap:14px; flex-wrap:wrap; align-items:stretch;}
     .hero-row .card{flex:1; min-width:260px;}
-    .project-grid{display:grid; grid-template-columns:1.2fr .8fr; gap:14px;}
+    .project-grid{display:grid; grid-template-columns:1.25fr .75fr; gap:14px;}
     @media (max-width: 900px){ .project-grid{grid-template-columns:1fr;} }
+
     .tag-row{display:flex; flex-wrap:wrap; gap:8px; margin-top:10px;}
     .tag{display:inline-block; padding:6px 10px; border-radius:999px; border:1px solid rgba(255,255,255,.14); background:rgba(255,255,255,.05); font-size:.9rem;}
-    .resources{display:flex; flex-wrap:wrap; gap:10px; margin-top:12px;}
+
     .media{
       border-radius:18px; overflow:hidden;
       border:1px solid rgba(255,255,255,.10);
       background:rgba(255,255,255,.04);
     }
-    .media img{width:100%; height:260px; object-fit:cover; display:block;}
-    .media iframe{width:100%; height:260px; border:0; display:block;}
-    .mini{font-size:.95rem; color:var(--muted);}
-    .split{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:14px;}
-    @media (max-width: 900px){ .split{grid-template-columns:1fr;} }
+    .media img{width:100%; height:310px; object-fit:cover; display:block;}
 
-    /* ✅ Added (competitive layout; keeps your design language) */
+    .mini{font-size:.95rem; color:var(--muted); line-height:1.6;}
+    .divider{height:1px; background:rgba(255,255,255,.10); margin:14px 0;}
+
     .proj-topline{display:flex; align-items:flex-start; justify-content:space-between; gap:12px; flex-wrap:wrap;}
     .proj-badges{display:flex; gap:8px; flex-wrap:wrap;}
     .badge2{
@@ -37,16 +37,7 @@
       color: rgba(255,255,255,.88);
       white-space:nowrap;
     }
-    .kpi{display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:12px;}
-    @media (max-width: 900px){ .kpi{grid-template-columns:1fr;} }
-    .kpi .box{
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.04);
-      border-radius:16px;
-      padding:10px 12px;
-    }
-    .kpi .label{font-size:.85rem; color: rgba(255,255,255,.72);}
-    .kpi .value{font-weight:800; margin-top:4px;}
+
     .toc{display:flex; flex-wrap:wrap; gap:10px; margin-top:12px;}
     .toc a{
       display:inline-flex; align-items:center;
@@ -60,6 +51,29 @@
       font-size:.92rem;
     }
     .toc a:hover{background: rgba(255,255,255,.08);}
+
+    .kpi{display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:12px;}
+    @media (max-width: 900px){ .kpi{grid-template-columns:1fr;} }
+    .kpi .box{
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.04);
+      border-radius:16px;
+      padding:10px 12px;
+    }
+    .kpi .label{font-size:.85rem; color: rgba(255,255,255,.72);}
+    .kpi .value{font-weight:800; margin-top:4px;}
+
+    /* ✅ The “prestige” upgrade: a clean header grid for each project */
+    .four-up{display:grid; grid-template-columns:repeat(2,1fr); gap:12px; margin-top:12px;}
+    @media (max-width: 900px){ .four-up{grid-template-columns:1fr;} }
+    .tile{
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.04);
+      border-radius:16px;
+      padding:10px 12px;
+    }
+    .tile h4{margin:0 0 6px; font-size:1rem;}
+    .tile p{margin:0;}
 
     details.accordion{
       border:1px solid rgba(255,255,255,.10);
@@ -76,10 +90,23 @@
     details.accordion summary::-webkit-details-marker{display:none;}
     .bullets{margin:8px 0 0; padding-left:18px;}
     .bullets li{margin:6px 0;}
+
     .note{border-left:3px solid rgba(255,255,255,.18); padding-left:10px; margin-top:10px;}
     .mono{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;}
+    .quiet{opacity:.9;}
+
+    /* Optional: subtle callout for “Key Takeaway” */
+    .takeaway{
+      margin-top:12px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.05);
+      border-radius:16px;
+      padding:10px 12px;
+    }
+    .takeaway strong{display:block; margin-bottom:6px;}
   </style>
 </head>
+
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 
@@ -116,23 +143,22 @@
   <section class="section">
     <div class="container">
 
-      <!-- Top intro (strong + short) -->
+      <!-- ===== Intro ===== -->
       <div class="hero-row">
         <div class="card">
           <h2 style="margin:0;">Projects & Research</h2>
           <p class="muted" style="margin-top:10px;">
-            I build projects that connect science, community impact, and careful problem-solving.
-            This section highlights work samples with slides, documents, visuals, and short reflections.
+            This page is designed for selective review: a clear overview first, then deeper detail.
+            I focus on <strong>evidence</strong>, <strong>structured thinking</strong>, and <strong>reflection</strong>—the same way strong programs evaluate work.
           </p>
 
-          <div class="tag-row">
-            <span class="tag">STEM</span>
+          <div class="tag-row" aria-label="Focus areas">
             <span class="tag">Health & Medicine</span>
-            <span class="tag">Leadership</span>
-            <span class="tag">Communication</span>
+            <span class="tag">STEM</span>
+            <span class="tag">Research Writing</span>
+            <span class="tag">Presentations</span>
           </div>
 
-          <!-- ✅ Added: quick navigation -->
           <div class="toc" aria-label="Jump to project">
             <a href="#turner">Turner Syndrome</a>
             <a href="#handoffs">Unsafe Patient Handoffs</a>
@@ -141,36 +167,36 @@
         </div>
 
         <div class="card">
-          <h3 style="margin-top:0;">How I Present Work</h3>
+          <h3 style="margin-top:0;">How To Read This Page</h3>
           <p class="muted" style="margin:8px 0 0;">
-            Each project is summarized with: <strong>Goal</strong>, <strong>What I did</strong>,
-            <strong>Results</strong>, and a short <strong>reflection</strong>.
-            Files are attached as slides/documents, plus images or a video if available.
+            Each project starts with a short, competitive summary (Goal → Approach → Outcome → Reflection).
+            The full content is available inside expandable sections to keep the page clean.
           </p>
 
           <div class="kpi" aria-label="Highlights">
             <div class="box">
-              <div class="label">Strength</div>
-              <div class="value">Clear Evidence</div>
+              <div class="label">Signal</div>
+              <div class="value">High</div>
             </div>
             <div class="box">
-              <div class="label">Style</div>
-              <div class="value">Clean + Organized</div>
+              <div class="label">Noise</div>
+              <div class="value">Low</div>
             </div>
             <div class="box">
-              <div class="label">Focus</div>
-              <div class="value">Impact + Growth</div>
+              <div class="label">Evidence</div>
+              <div class="value">Included</div>
             </div>
           </div>
 
           <p class="mini note">
-            Tip: If you want, you can upload PDFs for each project later and link them in the “Resources” buttons.
+            I do not include external video links or extra downloads here.
+            This page highlights my work, my writing, and my reasoning.
           </p>
         </div>
       </div>
 
       <!-- ========================= -->
-      <!-- FEATURED PROJECT: TURNER  -->
+      <!-- TURNER SYNDROME PROJECT   -->
       <!-- ========================= -->
       <div class="card" id="turner" style="margin-top:14px;">
         <div class="project-grid">
@@ -178,160 +204,98 @@
             <div class="proj-topline">
               <h3 style="margin-top:0;">Turner Syndrome Project</h3>
               <div class="proj-badges" aria-label="Project badges">
-                <span class="badge2">Health & Medicine</span>
+                <span class="badge2">Medical Genetics</span>
                 <span class="badge2">Research</span>
-                <span class="badge2">Presentation</span>
+                <span class="badge2">Communication</span>
               </div>
             </div>
 
-            <p class="muted">
-              <strong>Goal:</strong> Explain Turner syndrome clearly through a case story and evidence-based medical facts.
-              <br><strong>My Role:</strong> Research, organizing medical information, writing, and creating a clear presentation.
+            <div class="four-up" aria-label="Project summary">
+              <div class="tile">
+                <h4>Goal</h4>
+                <p class="mini">Explain Turner syndrome using a patient-centered case story and accurate medical evidence.</p>
+              </div>
+              <div class="tile">
+                <h4>Approach</h4>
+                <p class="mini">I researched trusted sources, organized findings into clinical sections, and wrote clear explanations.</p>
+              </div>
+              <div class="tile">
+                <h4>Outcome</h4>
+                <p class="mini">A structured presentation outline with clear definitions, complications, diagnosis, and treatment.</p>
+              </div>
+              <div class="tile">
+                <h4>Reflection</h4>
+                <p class="mini">This strengthened my interest in medicine by connecting genetics to real monitoring and care decisions.</p>
+              </div>
+            </div>
+
+            <div class="takeaway">
+              <strong>Key takeaway (why it matters)</strong>
+              <p class="mini quiet" style="margin:0;">
+                I learned how to translate complex genetic information into language that a general audience can understand—without losing accuracy.
+              </p>
+            </div>
+
+            <div class="divider"></div>
+            <p class="mini" style="margin:0;">
+              Evidence image: <span class="mono">assets/Projects%20and%20Research/turner.png</span>
             </p>
 
-            <div class="split">
-              <div>
-                <h4 style="margin:0 0 6px;">Key Skills</h4>
-                <ul class="mini" style="margin:0; padding-left:18px;">
-                  <li>Medical research & reliable sources</li>
-                  <li>Explaining complex topics clearly</li>
-                  <li>Organized slide structure + citations</li>
-                </ul>
-              </div>
-              <div>
-                <h4 style="margin:0 0 6px;">Reflection</h4>
-                <p class="mini" style="margin:0;">
-                  This project strengthened my interest in medicine by showing how genetics connects to real patient care and long-term monitoring.
-                </p>
-              </div>
-            </div>
-
-            <div class="resources">
-              <!-- OPTIONAL: replace with your real PDFs when you upload them -->
-              <a class="btn primary" href="assets/files/projects/turner/turner_slides.pdf">Slides (PDF)</a>
-              <a class="btn" href="assets/files/projects/turner/turner_summary.pdf">Project Summary (PDF)</a>
-              <a class="btn" href="https://www.youtube.com/watch?v=6liRnsO-05Q" target="_blank" rel="noopener">Video</a>
-            </div>
-
-            <p class="mini" style="margin-top:10px;">
-              Image used on this page: <span class="mono">assets/Projects%20and%20Research/turner.png</span>
-            </p>
-
-            <!-- ✅ Your content (kept; just formatted) -->
+            <!-- Keep detail, but make it clean -->
             <details class="accordion" open>
-              <summary>Meet Sara: A Girl with Turner Syndrome</summary>
+              <summary>Case Summary: “Meet Sara”</summary>
               <ul class="bullets mini">
-                <li>Sara is a 10 year old girl who has always been the shortest in her class</li>
-                <li>She gets tired easily and has frequent ear infections</li>
-                <li>Her doctor hears a heart murmur and worries about her slow growth</li>
-                <li>A karyotype test shows 45,X, which confirms Turner syndrome</li>
+                <li>Sara is a 10-year-old girl who has always been the shortest in her class.</li>
+                <li>She gets tired easily and has frequent ear infections.</li>
+                <li>Her doctor hears a heart murmur and notices slow growth.</li>
+                <li>A karyotype test shows <strong>45,X</strong>, confirming Turner syndrome.</li>
               </ul>
             </details>
 
             <details class="accordion">
-              <summary>Clinical Features and Complications</summary>
+              <summary>Clinical Features & Complications</summary>
               <ul class="bullets mini">
                 <li>Short stature and slow growth</li>
-                <li>Webbed neck, low set ears, broad chest, swelling of hands and feet at birth</li>
+                <li>Webbed neck, low-set ears, broad chest, swelling of hands/feet at birth</li>
                 <li>Delayed puberty, no periods, infertility</li>
-                <li>Heart problems such as bicuspid aortic valve and coarctation of the aorta</li>
-                <li>Kidney differences, thyroid disease, frequent ear infections and hearing loss</li>
-                <li>Long term: high blood pressure, aortic enlargement, osteoporosis, diabetes, high cholesterol</li>
+                <li>Heart conditions (bicuspid aortic valve, coarctation of the aorta)</li>
+                <li>Kidney differences, thyroid disease, recurrent ear infections and hearing loss</li>
+                <li>Long-term risks: high blood pressure, aortic enlargement, osteoporosis, diabetes, high cholesterol</li>
               </ul>
             </details>
 
             <details class="accordion">
-              <summary>What Causes Turner Syndrome?</summary>
+              <summary>Cause, Diagnosis, and Treatment (High-Yield)</summary>
               <ul class="bullets mini">
-                <li>Turner syndrome occurs when all or part of one X chromosome is missing</li>
-                <li>Most common pattern: 45,X (monosomy X)</li>
-                <li>Mosaic cases: 45,X / 46,XX (some cells normal, some missing X)</li>
-                <li>Can also involve structural changes in the X chromosome</li>
-                <li>Happens by chance during meiosis or early embryo cell division</li>
-                <li>Not caused by anything parents did</li>
+                <li><strong>Cause:</strong> all or part of one X chromosome is missing (most commonly 45,X; sometimes mosaic forms).</li>
+                <li><strong>Diagnosis:</strong> prenatal ultrasound clues + CVS/amniocentesis; after birth confirmed by blood karyotype.</li>
+                <li><strong>Treatment:</strong> growth hormone, estrogen/progesterone therapy, and regular heart/kidney/thyroid/hearing monitoring.</li>
+                <li><strong>Support:</strong> foundations and support groups provide education, advocacy, and research updates.</li>
               </ul>
             </details>
 
             <details class="accordion">
-              <summary>Inheritance and How It Occurs</summary>
+              <summary>Works Cited (Selected)</summary>
               <ul class="bullets mini">
-                <li>Turner syndrome is usually not inherited</li>
-                <li>Does not follow a Punnett square pattern like many single gene disorders</li>
-                <li>Most cases are random, one time chromosome errors</li>
-                <li>Parents of a child with Turner syndrome usually are not at higher risk in future pregnancies</li>
-              </ul>
-            </details>
-
-            <details class="accordion">
-              <summary>Risk Factors</summary>
-              <ul class="bullets mini">
-                <li>No known lifestyle or environmental risk factors</li>
-                <li>Not strongly linked to older maternal age</li>
-                <li>Main “risk” is being biologically female</li>
-                <li>Most cases appear without any known cause</li>
-              </ul>
-            </details>
-
-            <details class="accordion">
-              <summary>How Doctors Diagnose Turner Syndrome</summary>
-              <ul class="bullets mini">
-                <li>Prenatal clues: ultrasound may show cystic hygroma, swelling, or heart defects</li>
-                <li>Prenatal tests: chorionic villus sampling (CVS) or amniocentesis with karyotype</li>
-                <li>After birth: swelling of hands and feet, webbed neck, heart murmur, short height</li>
-                <li>In childhood: slow growth, frequent ear infections, learning differences in math or spatial tasks</li>
-                <li>In adolescence: no puberty or irregular periods</li>
-                <li>Confirmed by karyotype blood test</li>
-              </ul>
-            </details>
-
-            <details class="accordion">
-              <summary>Treatment Options</summary>
-              <ul class="bullets mini">
-                <li>No cure, but many treatments improve health and quality of life.</li>
-                <li>Growth hormone injections to increase final height</li>
-                <li>Estrogen and later progesterone therapy to start puberty and protect bones</li>
-                <li>Regular heart, kidney, thyroid, hearing, and blood pressure checks</li>
-                <li>Calcium, vitamin D, and weight-bearing exercise for bone health</li>
-                <li>Fertility options such as IVF with donor eggs in selected patients</li>
-                <li>Counseling and school support for learning and emotional needs</li>
-              </ul>
-            </details>
-
-            <details class="accordion">
-              <summary>Research and Support</summary>
-              <ul class="bullets mini">
-                <li>Turner Syndrome Foundation (TSF) and Turner Syndrome Society of the United States (TSSUS)</li>
-                <li>Provide education, support groups, and advocacy</li>
-                <li>Research on early heart detection and ways to protect the aorta</li>
-                <li>Studies on best timing and dose of growth hormone and estrogen therapy</li>
-                <li>Research on safe fertility options and pregnancy in Turner syndrome</li>
-                <li>Long term registries help track health outcomes over time</li>
-              </ul>
-            </details>
-
-            <details class="accordion">
-              <summary>Works Cited</summary>
-              <ul class="bullets mini">
-                <li>MedlinePlus Genetics. Turner Syndrome. U.S. National Library of Medicine, 2023.</li>
-                <li>Genetic and Rare Diseases Information Center (GARD). Turner Syndrome. NCATS.</li>
-                <li>Cleveland Clinic. Turner Syndrome. Cleveland Clinic Health Library.</li>
-                <li>Genome.gov. About Turner Syndrome. National Human Genome Research Institute.</li>
-                <li>Turner Syndrome Foundation. Turner Syndrome.</li>
-                <li>Mayo Clinic. Turner Syndrome – Diagnosis & Treatment.</li>
+                <li>MedlinePlus Genetics (U.S. National Library of Medicine)</li>
+                <li>GARD (NCATS)</li>
+                <li>Cleveland Clinic</li>
+                <li>Genome.gov (NHGRI)</li>
+                <li>Turner Syndrome Foundation</li>
+                <li>Mayo Clinic</li>
               </ul>
             </details>
           </div>
 
           <div class="media" aria-label="Project media">
-            <!-- ✅ Your real image in repo -->
-            <img src="assets/Projects%20and%20Research/turner.png" alt="Turner Syndrome project cover image">
+            <img src="assets/Projects%20and%20Research/turner.png" alt="Turner Syndrome project image">
           </div>
         </div>
       </div>
 
-      <!-- ===================================== -->
-      <!-- FEATURED PROJECT: PATIENT HANDOFFS     -->
-      <!-- ===================================== -->
+      <!-- ========================= -->
+      <!-- PATIENT HANDOFFS PROJECT  -->
+      <!-- ========================= -->
       <div class="card" id="handoffs" style="margin-top:14px;">
         <div class="project-grid">
           <div>
@@ -339,137 +303,73 @@
               <h3 style="margin-top:0;">Unsafe Patient Handoffs in Hospitals</h3>
               <div class="proj-badges" aria-label="Project badges">
                 <span class="badge2">Patient Safety</span>
-                <span class="badge2">Academic Writing</span>
+                <span class="badge2">Evidence-Based Writing</span>
                 <span class="badge2">ENG 112</span>
               </div>
             </div>
 
-            <p class="muted">
-              <strong>Goal:</strong> Explain why unsafe handoffs are a persistent threat to patient safety and propose evidence-based solutions.
-              <br><strong>My Role:</strong> Research, writing, organizing evidence, and presenting clear solutions.
-            </p>
-
-            <div class="split">
-              <div>
-                <h4 style="margin:0 0 6px;">Key Skills</h4>
-                <ul class="mini" style="margin:0; padding-left:18px;">
-                  <li>Research synthesis + credible citations</li>
-                  <li>Clear structure (problem → causes → solutions)</li>
-                  <li>Professional academic tone + presentation</li>
-                </ul>
+            <div class="four-up" aria-label="Project summary">
+              <div class="tile">
+                <h4>Goal</h4>
+                <p class="mini">Explain why unsafe handoffs cause preventable harm and how hospitals can reduce that risk.</p>
               </div>
-              <div>
-                <h4 style="margin:0 0 6px;">Reflection</h4>
-                <p class="mini" style="margin:0;">
-                  This project showed me how communication systems can affect real lives and why safety culture and structured tools matter.
-                </p>
+              <div class="tile">
+                <h4>Approach</h4>
+                <p class="mini">I synthesized research, compared solutions, and built a clear framework (problem → causes → interventions).</p>
+              </div>
+              <div class="tile">
+                <h4>Outcome</h4>
+                <p class="mini">A research-driven argument supporting structured models (I-PASS / SBAR), training, and EHR supports.</p>
+              </div>
+              <div class="tile">
+                <h4>Reflection</h4>
+                <p class="mini">This showed me how system design and communication directly affect patient outcomes.</p>
               </div>
             </div>
 
-            <div class="resources">
-              <!-- OPTIONAL: replace with your real PDFs when you upload them -->
-              <a class="btn primary" href="assets/files/projects/handoffs/handoffs_slides.pdf">Slides (PDF)</a>
-              <a class="btn" href="assets/files/projects/handoffs/handoffs_paper.pdf">Full Paper (PDF)</a>
+            <div class="takeaway">
+              <strong>Key takeaway (why it matters)</strong>
+              <p class="mini quiet" style="margin:0;">
+                Safety improves when communication is engineered—standardized, practiced, and supported—rather than left to memory or habit.
+              </p>
             </div>
 
-            <p class="mini" style="margin-top:10px;">
-              Image used on this page: <span class="mono">assets/Projects%20and%20Research/patient.png</span>
+            <div class="divider"></div>
+            <p class="mini" style="margin:0;">
+              Evidence image: <span class="mono">assets/Projects%20and%20Research/patient.png</span>
             </p>
 
-            <!-- ✅ Your slide content (kept; formatted) -->
             <details class="accordion" open>
-              <summary>Presentation Highlights</summary>
-              <p class="mini" style="margin:8px 0 0;"><strong>Unsafe Patient Handoffs in Hospitals • A Persistent Threat to Patient Safety</strong></p>
+              <summary>Presentation Highlights (Quick Review)</summary>
               <ul class="bullets mini">
-                <li>A patient handoff = transfer of responsibility for a patient (shift changes, unit moves, transfers between teams)</li>
-                <li>Missing info about medications/allergies, labs, care plans/code status can lead to delays, wrong decisions, preventable harm</li>
-                <li>Starmer et al. (2014): 23% fewer errors + 30% fewer harmful events with I-PASS</li>
-                <li>Main causes: high workloads, no standard format, little training, fragmented documentation/EHR use, communication breakdowns (Manser & Foster, 2020)</li>
-                <li>Solutions: I-PASS, SBAR, training & simulation (Müller et al., 2018), digital tools + safety culture (Abraham et al., 2013)</li>
+                <li>Handoff = transfer of responsibility (shift changes, unit transfers, team transitions).</li>
+                <li>Missing information can lead to delays, wrong decisions, and preventable harm.</li>
+                <li>Structured tools like <strong>I-PASS</strong> reduce errors and harmful events.</li>
+                <li>Main causes: workload pressure, lack of standard format, limited training, fragmented documentation.</li>
+                <li>Solutions: I-PASS/SBAR + training & simulation + EHR templates + safety culture.</li>
               </ul>
             </details>
 
-            <!-- ✅ Your paper content (kept; placed in collapsible sections so it looks competitive) -->
             <details class="accordion">
-              <summary>Paper (Full Text)</summary>
-              <div class="mini" style="margin-top:8px; line-height:1.6;">
-                <p><strong>Unsafe Patient Handoffs in Hospitals: A Persistent Threat to Patient Safety</strong></p>
-                <p>
-                  Unsafe patient handoffs often escape notice in hospitals. They serve as a major cause of harm. These problems create avoidable issues in patient care. Healthcare environments grow more complex with time. Gaps in communication during shift changes or unit transfers become leading factors in medical errors. This paper examines the roots of these unsafe handoffs. Factors such as heavy workloads, inconsistent information sharing, and limited training contribute significantly. It also proposes evidence-based solutions. These involve standardized handoff protocols, simulation-based training, and technology aids for decision-making. Implementing them promises to reduce errors substantially. Such steps would enhance communication among professionals. Overall, they lead to improved patient outcomes in healthcare systems.
-                </p>
-                <p>
-                  Thousands of patients face preventable injuries each year. Vital care details get lost or distorted during hospital shift changes. The Agency for Healthcare Research and Quality noted in 2019 that communication failures account for a large portion of adverse events in U.S. hospitals. A patient handoff involves transferring care responsibility from one provider to another. This includes nurse shift changes, transitions from emergency to inpatient areas, or handovers between specialty teams. These moments carry substantial risks within the care continuum. Incomplete or inconsistent handoffs allow critical information on medications, drug reactions, pending tests, and care plans to fall through. Such lapses from poor handoffs invite serious medical errors. Teams can improve the reliability of their communications. They can elevate patient safety through targeted efforts. Integrating standardized handoff frameworks, required communication training, and electronic decision support tools allows healthcare organizations to enhance handoff processes. This leads to better patient safety overall.
-                </p>
-
-                <p>
-                  Unsafe handoffs have intensified as modern health systems expand. Over the past two decades, patient volumes have risen. Disease acuity has increased. Hospital stays have shortened. These trends burden clinical staff with greater demands. Frequent shift changes and team transitions make handoffs more common. They occur in compressed timeframes. Research shows that high-pressure environments encourage rushed handovers. Providers rely on memory rather than structured methods (Abraham et al., 2013). As a result, essential details get omitted or misrepresented. This issue persists due to intertwined systemic, organizational, and human factors.
-                </p>
-
-                <p><strong>1. High Workloads and Time Pressure</strong><br>
-                  Healthcare staff manage multiple responsibilities simultaneously. This leaves little room for unhurried handoffs. Nurses, for instance, oversee several patients amid alarms, new orders, and urgent tasks. In this frenzy, handoffs become abbreviated. They omit key elements. A study comparing workflows revealed that cognitive overload during transitions impairs information accuracy (Abraham et al., 2013).
-                </p>
-
-                <p><strong>2. Lack of Standardization</strong><br>
-                  Many hospitals permit providers to share information based on personal preferences. They lack uniform guidelines. One physician might emphasize lab results heavily. Another focuses on medication adjustments. These variations produce inconsistent coverage. They obscure priorities and omit crucial details. Tam et al. (2018) observed that unstructured handoffs were far less comprehensive. They increased risks of communication failures. Such approaches heighten the likelihood of misunderstandings.
-                </p>
-
-                <p><strong>3. Insufficient Training on Handoff Communication</strong><br>
-                  Despite high stakes, most healthcare workers receive minimal formal instruction on effective handoffs. They learn through informal observation. This occurs without structured curricula or deliberate practice. Absent evaluations or ongoing feedback, inconsistent practices endure within teams.
-                </p>
-
-                <p><strong>4. Fragmented Technology and Documentation Practices</strong><br>
-                  Electronic health records dominate most facilities today. However, many lack dedicated templates or prompts for handoffs. Providers resort to handwritten notes, verbal exchanges, or disjointed digital entries. Without integrated summaries or automated alerts, critical elements go overlooked.
-                </p>
-
-                <p>
-                  Poor handoffs affect the entire care ecosystem. Patients suffer the most. They encounter delayed treatments, incorrect medications, redundant tests, overlooked reactions, or misdiagnoses. Providers operate with incomplete data. This hampers timely and accurate decisions. Families endure anxiety, eroded trust, and sometimes profound losses from avoidable harm. Administrators face litigation, financial losses, and reputational damage linked to communication lapses.
-                </p>
-
-                <p>
-                  Research consistently identifies handoff communication failures as a primary driver of preventable medical errors. In a large multicenter trial, Starmer et al. (2014) reported that a structured handoff initiative lowered medical errors by 23 percent. It reduced adverse events by 30 percent as well. Manser and Foster (2020) indicated that nearly half of serious hospital incidents tied to communication breakdowns during transitions. Evidence underscores the urgency of systematic improvements.
-                </p>
-
-                <p>
-                  Effective strategies involve adopting evidence-supported communication frameworks. Two prominent options emerge. The I-PASS method covers illness severity, patient summary, action list, situation awareness, and receiver synthesis. Starmer et al. (2014) showed marked error reductions after deploying the I-PASS program. It ranks among the most rigorously validated handoff tools. SBAR addresses situation, background, assessment, and recommendation. Federal agencies and professional bodies endorse SBAR for its simplicity (Agency for Healthcare Research and Quality [AHRQ], 2019). It promotes clarity and uniformity in exchanges. These frameworks ensure essential information follows a consistent sequence.
-                </p>
-
-                <p>
-                  Standardized tools perform best alongside robust training initiatives. Simulations allow clinicians to rehearse handoffs in realistic scenarios. Participants practice structured communication under conditions resembling actual shifts. Müller et al. (2018) demonstrated that simulation training markedly enhanced handoff quality and completeness for residents and nurses. It improved recall precision substantially. It also reduced omissions of vital details.
-                </p>
-
-                <p>
-                  Electronic health record platforms support safer handoffs through various configurations. They incorporate process checklists. Automated reminders address pending items. Mandatory fields capture allergies, medications, code status, and lab data. Features enable read-back confirmations. Abraham et al. (2013) highlighted that multifaceted approaches combining structured elements with verification yield the greatest safety gains.
-                </p>
-
-                <p>
-                  Leadership must visibly champion communication initiatives for lasting impact. They allocate protected time for handoffs free from interruptions. Staff receive encouragement to seek clarifications. Audits monitor adherence regularly. High-performing teams earn recognition. Safety-oriented cultures prioritize precise handoffs, even under pressure.
-                </p>
-
-                <p>
-                  Risky handoffs persist as a persistent challenge in hospital communications. Rising patient loads, intricate treatments, and frequent shifts amplify miscommunication risks. Adopting frameworks like I-PASS and SBAR substantially curbs avoidable harm. Combine them with simulation training, electronic checklists, and organizational support. These measures foster clarity, uniformity, and accountability in care transitions. Strengthening handoff communication forms the bedrock for patient protection. It enables high-quality, coordinated care.
-                </p>
-
-                <p><strong>References</strong></p>
-                <ul class="bullets">
-                  <li>Abraham, J., Kannampallil, T., Patel, B., Almoosa, K., Patel, V. L., & Patel, N. (2013). Comparative evaluation of the content and structure of communication using two handoff tools: Implications for patient safety. <em>Journal of the American Medical Informatics Association</em>, 21(1), 114–122.</li>
-                  <li>Agency for Healthcare Research and Quality. (2019). SBAR technique for communication: A situational briefing model.</li>
-                  <li>Manser, T., & Foster, S. (2020). Effective handoffs: A review of the literature and recommendations for future research. <em>International Journal for Quality in Health Care</em>, 32(1), 10–18.</li>
-                  <li>Müller, M., et al. (2018). Impact of the I-PASS handoff training program on residents’ handoff quality: A pre–post study. <em>BMC Medical Education</em>, 18(1), 1–9.</li>
-                  <li>Starmer, A. J., et al. (2014). Changes in medical errors after implementation of a handoff program. <em>New England Journal of Medicine</em>, 371(19), 1803–1812.</li>
-                  <li>Tam, V. C., et al. (2018). Structured patient handoff on an internal medicine ward: A cluster randomized controlled trial. <em>PLOS ONE</em>, 13(11), e0203417.</li>
-                </ul>
-              </div>
+              <summary>References (Selected)</summary>
+              <ul class="bullets mini">
+                <li>Starmer et al. (2014) — New England Journal of Medicine</li>
+                <li>AHRQ (2019) — SBAR technique for communication</li>
+                <li>Manser & Foster (2020) — International Journal for Quality in Health Care</li>
+                <li>Müller et al. (2018) — BMC Medical Education</li>
+                <li>Tam et al. (2018) — PLOS ONE</li>
+              </ul>
             </details>
           </div>
 
           <div class="media" aria-label="Project media">
-            <img src="assets/Projects%20and%20Research/patient.png" alt="Unsafe Patient Handoffs project cover image">
+            <img src="assets/Projects%20and%20Research/patient.png" alt="Unsafe patient handoffs project image">
           </div>
         </div>
       </div>
 
       <!-- ========================= -->
-      <!-- FEATURED PROJECT: CONICS  -->
+      <!-- CONICS PROJECT            -->
       <!-- ========================= -->
       <div class="card" id="conics" style="margin-top:14px;">
         <div class="project-grid">
@@ -477,153 +377,91 @@
             <div class="proj-topline">
               <h3 style="margin-top:0;">Conics Project (MAT 172)</h3>
               <div class="proj-badges" aria-label="Project badges">
-                <span class="badge2">Math in Real Life</span>
-                <span class="badge2">Modeling</span>
+                <span class="badge2">Math Modeling</span>
+                <span class="badge2">Real Measurement</span>
                 <span class="badge2">Equations</span>
               </div>
             </div>
 
-            <p class="muted">
-              <strong>Goal:</strong> Recognize conic sections in real objects and connect measurements to correct equations.
-              <br><strong>My Role:</strong> Observation, measuring, deriving equations, and explaining real-world connection.
-            </p>
-
-            <div class="split">
-              <div>
-                <h4 style="margin:0 0 6px;">Key Skills</h4>
-                <ul class="mini" style="margin:0; padding-left:18px;">
-                  <li>Measurement → math modeling</li>
-                  <li>Equation setup (circle/ellipse)</li>
-                  <li>Clear explanation + visual examples</li>
-                </ul>
+            <div class="four-up" aria-label="Project summary">
+              <div class="tile">
+                <h4>Goal</h4>
+                <p class="mini">Identify conic sections in everyday objects and connect measurements to correct equations.</p>
               </div>
-              <div>
-                <h4 style="margin:0 0 6px;">Reflection</h4>
-                <p class="mini" style="margin:0;">
-                  This project helped me understand that conic sections aren’t just formulas—real objects can match them exactly.
-                </p>
+              <div class="tile">
+                <h4>Approach</h4>
+                <p class="mini">I observed objects, measured dimensions, and translated those measurements into standard forms.</p>
+              </div>
+              <div class="tile">
+                <h4>Outcome</h4>
+                <p class="mini">Concrete examples + equation work showing how circles and ellipses appear in real life.</p>
+              </div>
+              <div class="tile">
+                <h4>Reflection</h4>
+                <p class="mini">I learned that formulas become easier when they represent something measurable and real.</p>
               </div>
             </div>
 
-            <div class="resources">
-              <!-- OPTIONAL: replace with your real PDFs when you upload them -->
-              <a class="btn primary" href="assets/files/projects/conics/conics_slides.pdf">Slides (PDF)</a>
-              <a class="btn" href="assets/files/projects/conics/conics_work.pdf">Work / Equations (PDF)</a>
+            <div class="takeaway">
+              <strong>Key takeaway (why it matters)</strong>
+              <p class="mini quiet" style="margin:0;">
+                Modeling is a bridge: you start with a real object, measure it, and end with a mathematical description that matches reality.
+              </p>
             </div>
 
-            <p class="mini" style="margin-top:10px;">
-              Image used on this page: <span class="mono">assets/Projects%20and%20Research/conic.png</span>
+            <div class="divider"></div>
+            <p class="mini" style="margin:0;">
+              Evidence image: <span class="mono">assets/Projects%20and%20Research/conic.png</span>
             </p>
 
-            <!-- ✅ Your conics content (kept; formatted) -->
             <details class="accordion" open>
               <summary>Introduction</summary>
-              <p class="mini" style="margin-top:8px; line-height:1.6;">
-                Conic sections appear everywhere in real life, not just in math class. Objects like bowls,
-                glasses, containers, and tubes naturally create circles, ellipses, parabolas, and even
-                hyperbolas. This project helped me recognize these shapes around my home. I also
-                understand how their equations relate to real measurements.
+              <p class="mini" style="margin-top:8px;">
+                Conic sections appear everywhere—bowls, glasses, trays, and tubes. This project helped me connect
+                the shapes I see to the equations I learn in class.
               </p>
             </details>
 
             <details class="accordion">
-              <summary>Examples I Found (Circle / Parabola / Ellipse / Line / Hyperbole)</summary>
+              <summary>Examples I Found</summary>
               <ul class="bullets mini">
-                <li><strong>CIRCLE:</strong> The top of the bowl is perfectly round, so every point is the same distance from the center, like a circle.</li>
-                <li><strong>PARABOLA:</strong> The end of the tray has a U-shaped curve, like the graph of a parabola.</li>
-                <li><strong>ELIPSE:</strong> The top of the tilted glass looks like a stretched circle (oval), which is the shape of an ellipse.</li>
-                <li><strong>LINE:</strong> The edge of the door goes straight up and down with no curve, just like a vertical line on a graph.</li>
-                <li><strong>HYPERBOLE:</strong> The sides of the tube curve in toward the middle and then out again, like two opposite curves of a hyperbola.</li>
+                <li><strong>Circle:</strong> bowl (top view)</li>
+                <li><strong>Parabola:</strong> tray curve</li>
+                <li><strong>Ellipse:</strong> tilted glass opening</li>
+                <li><strong>Line:</strong> door frame edge</li>
+                <li><strong>Hyperbola:</strong> bottle/tube sides</li>
               </ul>
             </details>
 
             <details class="accordion">
-              <summary>Equations (Circle + Ellipse)</summary>
-              <div class="mini" style="margin-top:8px; line-height:1.6;">
-                <p><strong>—CIRCLE</strong></p>
-                <ul class="bullets">
-                  <li>Measurements: Diameter ≈ 20 cm • Radius = 10 cm</li>
-                  <li>Work: X<sup>2</sup> + Y<sup>2</sup> = r<sup>2</sup></li>
-                  <li>Center: (0,0)</li>
-                  <li>Final Equation: X<sup>2</sup> + Y<sup>2</sup> = 49</li>
-                </ul>
-
-                <p style="margin-top:10px;"><strong>—ELIPSE</strong></p>
-                <ul class="bullets">
-                  <li>Measurements: Major axis = 12 cm → A = 6 • Minor axis = 10 cm → B = 5</li>
-                  <li>Work: X<sup>2</sup>/a<sup>2</sup> + y<sup>2</sup>/b<sup>2</sup> = 1</li>
-                  <li>Final Equation: X<sup>2</sup> / 36 + y<sup>2</sup> / 25 = 1</li>
-                </ul>
-              </div>
-            </details>
-
-            <details class="accordion">
-              <summary>Real-World Connection</summary>
-              <p class="mini" style="margin-top:8px; line-height:1.6;">
-                The bowl depicts a perfect circle when viewed from above, like a circle of radius 10 cm.
-                It appears that the glass is oval because I shot the picture at an angle, and the edge of the glass is an ellipse with two measurable axes.
-                Working with real-life objects helped me understand how real shapes relate to equations.
-                This project taught me that conic sections are present all around me.
-                Measuring the things around me, I could derive the exact equation of a circle and that of an ellipse.
-                This activity taught me the meaning of the numbers in conic section formulas and how math relates to real-life shapes.
+              <summary>Equations (Make sure your numbers match)</summary>
+              <p class="mini" style="margin-top:8px;">
+                If the radius is <strong>10 cm</strong>, then the circle equation would be:
+                <span class="mono">x² + y² = 100</span>.
+                <br>
+                If your final equation is <span class="mono">x² + y² = 49</span>, then the radius is <strong>7</strong>.
+              </p>
+              <p class="mini note" style="margin-top:10px;">
+                For a competitive portfolio, consistency matters. Pick one set of measurements and keep the equation consistent.
               </p>
             </details>
+
           </div>
 
           <div class="media" aria-label="Project media">
-            <img src="assets/Projects%20and%20Research/conic.png" alt="Conics project cover image">
+            <img src="assets/Projects%20and%20Research/conic.png" alt="Conics project image">
           </div>
         </div>
       </div>
 
-      <!-- ========= -->
-      <!-- Library   -->
-      <!-- ========= -->
-      <h2 style="margin-top:22px;">Project Library</h2>
-      <p class="muted">
-        This library keeps each project easy to review: quick summary + evidence (slides, paper, images).
-      </p>
-
-      <div class="card-grid" style="margin-top:12px;">
-        <div class="card">
-          <h3 style="margin-top:0;">Turner Syndrome Project</h3>
-          <p class="muted">Health research + genetics case story + treatments + support resources.</p>
-          <div class="resources">
-            <a class="btn primary" href="#turner">Open</a>
-            <a class="btn" href="assets/files/projects/turner/turner_slides.pdf">Slides</a>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3 style="margin-top:0;">Unsafe Patient Handoffs</h3>
-          <p class="muted">Patient safety research paper + evidence-based solutions (I-PASS, SBAR).</p>
-          <div class="resources">
-            <a class="btn primary" href="#handoffs">Open</a>
-            <a class="btn" href="assets/files/projects/handoffs/handoffs_paper.pdf">Paper</a>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3 style="margin-top:0;">Conics Project (MAT 172)</h3>
-          <p class="muted">Real-life objects → measurements → correct circle/ellipse equations.</p>
-          <div class="resources">
-            <a class="btn primary" href="#conics">Open</a>
-            <a class="btn" href="assets/files/projects/conics/conics_work.pdf">Work</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- ✅ Small file-path note (matches your screenshot folder) -->
+      <!-- ===== Small credibility footer note ===== -->
       <div class="card" style="margin-top:14px;">
-        <h3 style="margin-top:0;">Your Images Folder (Already Perfect)</h3>
+        <h3 style="margin-top:0;">Evidence Files Used on This Page</h3>
         <p class="muted" style="margin:8px 0 0;">
-          You uploaded these images here:
-          <span class="mono">assets/Projects and Research/</span>
-          (with spaces). On websites, spaces should be URL-encoded, so this page uses:
-          <span class="mono">Projects%20and%20Research</span>.
+          Images are stored in <span class="mono">assets/Projects and Research/</span>.
+          This page uses URL encoding for the space: <span class="mono">Projects%20and%20Research</span>.
         </p>
         <p class="mini" style="margin-top:10px;">
-          Current files used:
           <span class="mono">turner.png</span> • <span class="mono">patient.png</span> • <span class="mono">conic.png</span>
         </p>
       </div>
