@@ -58,6 +58,36 @@
     .dot.active{background: rgba(255,255,255,.85);}
     .grid-2{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
     @media (max-width: 800px){ .grid-2{grid-template-columns:1fr;} }
+
+    /* --- Added: Projects write-ups section (keeps your overall style) --- */
+    .section-title{margin:0;}
+    .project-list{display:grid; gap:14px; margin-top:10px;}
+    .project-item h4{margin:0;}
+    .project-meta{margin:6px 0 0; font-size:.95rem; color: rgba(255,255,255,.78);}
+    .project-text{margin:10px 0 0; color: rgba(255,255,255,.86); line-height:1.55;}
+    .chips{display:flex; flex-wrap:wrap; gap:8px; margin-top:10px;}
+    .chip{
+      display:inline-flex; align-items:center;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.06);
+      font-size:.92rem;
+      color: rgba(255,255,255,.88);
+    }
+    details.accordion{
+      border:1px solid rgba(255,255,255,.10);
+      border-radius:14px;
+      padding:10px 12px;
+      background: rgba(255,255,255,.04);
+    }
+    details.accordion summary{
+      cursor:pointer;
+      font-weight:700;
+      list-style:none;
+    }
+    details.accordion summary::-webkit-details-marker{display:none;}
+    .muted-small{color: rgba(255,255,255,.78); font-size:.95rem;}
   </style>
 </head>
 <body>
@@ -115,6 +145,186 @@
         </div>
       </div>
 
+      <!-- ✅ Projects write-ups (your exact writing kept) -->
+      <div class="card" style="margin-top:14px;">
+        <h3 class="section-title">Projects</h3>
+        <p class="muted" style="margin:8px 0 0;">
+          <strong>Remas Bani Aldomi</strong><br>
+          <span class="muted-small">Interior Design Fundamentals — Athens Drive Magnet High School — 05/25/2025</span>
+        </p>
+
+        <div class="chips" aria-label="Project topics">
+          <span class="chip">Paper Shelter Challenge</span>
+          <span class="chip">Color Wheel</span>
+          <span class="chip">Floorplan</span>
+          <span class="chip">Perspective Drawing</span>
+          <span class="chip">Color Schemes</span>
+          <span class="chip">Foldable Room Designs</span>
+          <span class="chip">Design Thinking</span>
+          <span class="chip">Instructional Poster</span>
+        </div>
+
+        <div class="project-list">
+
+          <div class="project-item">
+            <details class="accordion" open>
+              <summary>Paper Shelter Challenge</summary>
+              <p class="project-text">
+                I made a small cabin using only paper and glue. The cabin is white and brown, giving it a cozy and rustic look. I used folding and cutting techniques to create the walls and roof. The white color makes it look clean, while the brown gives it a warm, natural feel. The hardest part was making sure the paper stayed glued together, but I made sure everything was secure. The cabin looks simple, but it took a lot of care to put it together.
+              </p>
+            </details>
+          </div>
+
+          <div class="project-item">
+            <details class="accordion">
+              <summary>Color Wheel</summary>
+              <p class="project-text">
+                In my Interior Design class, I created a color wheel and learned how colors work together in a space. I discovered the primary colors—red, blue, and yellow—and how they mix to make secondary colors like green, orange, and purple.
+              </p>
+              <p class="project-text">
+                I also learned about hue, tint, tone, and shade. These helped me understand how designers use light and dark colors to create different moods in a room. This project was fun and helped me see how important color is in interior design.
+              </p>
+            </details>
+          </div>
+
+          <div class="project-item">
+            <details class="accordion">
+              <summary>Floorplan</summary>
+              <p class="project-text">
+                In my Interior Design class, I created a floor plan where I designed two rooms. This project helped me understand how to plan spaces and think about how people move and live in a room. It was a fun way to practice layout and space design.
+              </p>
+            </details>
+          </div>
+
+          <div class="project-item">
+            <details class="accordion">
+              <summary>2- Point Perspective Bedroom</summary>
+              <p class="project-text">
+                As part of my Interior Design class, I drew a bedroom using two-point perspective. This technique helped me make the room look more realistic by showing depth and angles. It was a great way to practice how to draw spaces that look 3D.
+              </p>
+            </details>
+          </div>
+
+          <div class="project-item">
+            <details class="accordion">
+              <summary>1- Point Perspective Name</summary>
+              <p class="project-text">
+                In class, I practiced one-point perspective by writing my name using this drawing technique. It helped me learn how to show depth and make letters look like they are going back into space. It was a fun and creative way to understand perspective drawing.
+              </p>
+            </details>
+          </div>
+
+          <div class="project-item">
+            <details class="accordion">
+              <summary>Monochromatic Living Room</summary>
+              <p class="project-text">
+                For one of my projects, I designed a living room using a monochromatic green color scheme. I used different shades, tints, and tones of green to create a calm and stylish space. This project taught me how using just one color in different ways can still make a room look interesting and balanced.
+              </p>
+            </details>
+          </div>
+
+          <div class="project-item">
+            <details class="accordion">
+              <summary>Monochromatic Bedroom</summary>
+              <p class="project-text">
+                In this project, I designed a bedroom using a monochromatic yellow color scheme. I used light and dark shades of yellow to give the room warmth and brightness. This activity helped me see how one color can create a cozy and unified look when used in different ways.
+              </p>
+            </details>
+          </div>
+
+          <div class="project-item">
+            <details class="accordion">
+              <summary>Complementary Office</summary>
+              <p class="project-text">
+                For my project, I designed an office using complementary colors—orange and blue. These two colors sit opposite each other on the color wheel, which makes the space lively and balanced. Using complementary colors helped me understand how contrast can make a room feel energetic and visually appealing.
+              </p>
+            </details>
+          </div>
+
+          <div class="project-item">
+            <details class="accordion">
+              <summary>2-Point Perspective boxes</summary>
+              <p class="project-text">
+                In class, I practiced drawing boxes in two-point perspective. This helped me learn how to show depth and angles more realistically. It was a great exercise to improve my drawing skills and understand how objects look in 3D space.
+              </p>
+            </details>
+          </div>
+
+          <div class="project-item">
+            <details class="accordion">
+              <summary>Bubble Name</summary>
+              <p class="project-text">
+                For this project, I made a bubble name artwork that included an abstract picture of a cat. I wrote my name in cursive in the middle of the design. This project let me be creative with shapes and colors while expressing my style in a fun and artistic way.
+              </p>
+            </details>
+          </div>
+
+          <div class="project-item">
+            <details class="accordion">
+              <summary>Foldable Bedroom</summary>
+              <p class="project-text">
+                In this project, I created a foldable bedroom, where everything in the room can fold or collapse to save space. This design helped me think about smart, space-saving solutions, especially for small rooms. It was a fun and creative way to explore modern interior design ideas.
+              </p>
+            </details>
+          </div>
+
+          <div class="project-item">
+            <details class="accordion">
+              <summary>Foldable Living Room</summary>
+              <p class="project-text">
+                For this project, I designed a foldable living room, where every piece of furniture can be folded or stored away to save space. This idea is perfect for small apartments or multi-use areas. I enjoyed thinking creatively about how to make the room both stylish and functional. It showed me how smart design can make everyday living more comfortable and efficient.
+              </p>
+            </details>
+          </div>
+
+          <div class="project-item">
+            <details class="accordion">
+              <summary>Foldable Kitchen</summary>
+              <p class="project-text">
+                In this project, I created a foldable kitchen where all the elements—like the counters, table, and shelves—can be folded or tucked away to save space. This design is great for tiny homes or small apartments. It helped me think about how to make kitchens more flexible and efficient without losing style or function.
+              </p>
+            </details>
+          </div>
+
+          <div class="project-item">
+            <details class="accordion">
+              <summary>Foldable Bathroom</summary>
+              <p class="project-text">
+                In this project, I created a foldable bathroom that includes a bathtub, mirror, table, and shelves—all designed to fold or move to save space. Even without a sink or toilet, the design focuses on comfort and smart storage. This project helped me think creatively about how to make a bathroom functional and stylish in a small space.
+              </p>
+            </details>
+          </div>
+
+          <div class="project-item">
+            <details class="accordion">
+              <summary>Design Thinking Poster</summary>
+              <p class="project-text">
+                For this project, I created a poster about the steps of design thinking. I included all five steps: empathize, define, ideate, prototype, and test. On the poster, I explained what each step means and drew small pictures to show each one. This project helped me understand the creative process designers use to solve problems and come up with new ideas.
+              </p>
+            </details>
+          </div>
+
+          <div class="project-item">
+            <details class="accordion">
+              <summary>How to Make a Toast</summary>
+              <p class="project-text">
+                For this project, I created a poster showing the steps to make toast. I included clear steps with pictures to make it easy to follow. This activity helped me think about how to break down simple tasks into clear instructions, just like in design thinking.
+              </p>
+            </details>
+          </div>
+
+          <div class="project-item">
+            <details class="accordion">
+              <summary>LOVE in 1-Point Perspective</summary>
+              <p class="project-text">
+                In class, I practiced one-point perspective by drawing the word “Love.” This technique helped me learn how to add depth and dimension, making the letters look like they stretch back into space. It was a creative way to combine art and design skills.
+              </p>
+            </details>
+          </div>
+
+        </div>
+      </div>
+
       <!-- SLIDER -->
       <div class="card" style="margin-top:14px;">
         <h3 style="margin-top:0;">Gallery</h3>
@@ -146,45 +356,165 @@
 
   <script src="assets/js/lightbox.js"></script>
   <script>
-    // Update only this list when you add real images
+    /*
+      IMPORTANT:
+      Put your images in this folder exactly:
+      assets/images/crafts/
+
+      And make sure the file names + extensions match exactly (case-sensitive on GitHub).
+      Example: "ColorWheel.jpg" is different from "colorwheel.JPG"
+    */
+
+    // ✅ All of your Interior Design images added (nothing removed)
     const images = [
- {
-    src: "assets/images/crafts/IMG_20250226_122320847_MFNR.jpg",
-    title: "Mini House Model (Front View)",
-    caption: "Handcrafted mini house model — built with layered cardboard/foam pieces to practice structure, symmetry, and clean edges.",
-    alt: "Handmade miniature house model on a table with steps and a pitched roof"
-  },
-  {
-    src: "assets/images/crafts/IMG_20250228_111452513_MFNR.jpg",
-    title: "Mini House Model (Side View)",
-    caption: "Mini architecture study — side angle showing roof lines and window details, focusing on proportion and stability.",
-    alt: "Side view of a handmade miniature house model with a small window and roof detail"
-  },
-  {
-    src: "assets/images/crafts/IMG_20250322_133737600_MFNR-EDIT.jpg",
-    title: "Pressed-Flower Name Art",
-    caption: "Pressed-flower design — arranging dried flowers around lettering to practice composition, spacing, and color balance.",
-    alt: "Craft artwork with pressed flowers arranged around the name 'NAHED'"
-  },
-  {
-    src: "assets/images/crafts/IMG_20250323_011045324_MFNR-EDIT.jpg",
-    title: "Pressed-Flower Letter Tile",
-    caption: "Resin/pressed-flower tile — layered floral details around a decorative letter, focusing on neat placement and finishing.",
-    alt: "Small square craft tile with pressed flowers and a blue decorative letter"
-  },
-  {
-    src: "assets/images/crafts/IMG_20250410_184659363_MFNR.jpg",
-    title: "Poster & Presentation Board",
-    caption: "School project board — organized layout and visuals to communicate ideas clearly with balanced spacing and readable structure.",
-    alt: "Poster board project display with photos and printed sections arranged neatly"
-  },
-  {
-    src: "assets/images/crafts/sample_03.jpg",
-    title: "Mini Food Truck Model",
-    caption: "Mini food-truck model — detailed build focusing on design choices, neat assembly, and creative presentation.",
-    alt: "Handmade miniature food truck craft model displayed on a table"
-  }
-];
+      // Paper Shelter Challenge (3 photos)
+      {
+        src: "assets/images/crafts/shelter1.jpg",
+        title: "Paper Shelter Challenge (Sketch)",
+        caption: "I made a small cabin using only paper and glue. The cabin is white and brown, giving it a cozy and rustic look. I used folding and cutting techniques to create the walls and roof. The white color makes it look clean, while the brown gives it a warm, natural feel. The hardest part was making sure the paper stayed glued together, but I made sure everything was secure. The cabin looks simple, but it took a lot of care to put it together.",
+        alt: "Paper shelter challenge sketch of a small cabin"
+      },
+      {
+        src: "assets/images/crafts/shelter2.jpg",
+        title: "Paper Shelter Challenge (Model)",
+        caption: "I made a small cabin using only paper and glue. The cabin is white and brown, giving it a cozy and rustic look. I used folding and cutting techniques to create the walls and roof. The white color makes it look clean, while the brown gives it a warm, natural feel. The hardest part was making sure the paper stayed glued together, but I made sure everything was secure. The cabin looks simple, but it took a lot of care to put it together.",
+        alt: "Paper cabin model made from paper and glue"
+      },
+      {
+        src: "assets/images/crafts/shelter3.jpg",
+        title: "Paper Shelter Challenge (Presentation)",
+        caption: "I made a small cabin using only paper and glue. The cabin is white and brown, giving it a cozy and rustic look. I used folding and cutting techniques to create the walls and roof. The white color makes it look clean, while the brown gives it a warm, natural feel. The hardest part was making sure the paper stayed glued together, but I made sure everything was secure. The cabin looks simple, but it took a lot of care to put it together.",
+        alt: "Paper shelter project presentation photo"
+      },
+
+      // Color Wheel
+      {
+        src: "assets/images/crafts/ColorWheel.jpg",
+        title: "Color Wheel",
+        caption: "In my Interior Design class, I created a color wheel and learned how colors work together in a space. I discovered the primary colors—red, blue, and yellow—and how they mix to make secondary colors like green, orange, and purple. I also learned about hue, tint, tone, and shade. These helped me understand how designers use light and dark colors to create different moods in a room. This project was fun and helped me see how important color is in interior design.",
+        alt: "Color wheel project showing primary and secondary colors"
+      },
+
+      // Floorplan
+      {
+        src: "assets/images/crafts/Floorplan.jpg",
+        title: "Floorplan",
+        caption: "In my Interior Design class, I created a floor plan where I designed two rooms. This project helped me understand how to plan spaces and think about how people move and live in a room. It was a fun way to practice layout and space design.",
+        alt: "Floor plan drawing on graph paper"
+      },
+
+      // 2-Point Perspective Bedroom
+      {
+        src: "assets/images/crafts/Bedroom.png",
+        title: "2- Point Perspective Bedroom",
+        caption: "As part of my Interior Design class, I drew a bedroom using two-point perspective. This technique helped me make the room look more realistic by showing depth and angles. It was a great way to practice how to draw spaces that look 3D.",
+        alt: "Two-point perspective bedroom drawing"
+      },
+
+      // 1-Point Perspective Name
+      {
+        src: "assets/images/crafts/remas.png",
+        title: "1- Point Perspective Name",
+        caption: "In class, I practiced one-point perspective by writing my name using this drawing technique. It helped me learn how to show depth and make letters look like they are going back into space. It was a fun and creative way to understand perspective drawing.",
+        alt: "One-point perspective name drawing"
+      },
+
+      // Monochromatic Living Room
+      {
+        src: "assets/images/crafts/Monochromatic.png",
+        title: "Monochromatic Living Room",
+        caption: "For one of my projects, I designed a living room using a monochromatic green color scheme. I used different shades, tints, and tones of green to create a calm and stylish space. This project taught me how using just one color in different ways can still make a room look interesting and balanced.",
+        alt: "Monochromatic living room drawing in green tones"
+      },
+
+      // Monochromatic Bedroom
+      {
+        src: "assets/images/crafts/MonochromaticBedroom.png",
+        title: "Monochromatic Bedroom",
+        caption: "In this project, I designed a bedroom using a monochromatic yellow color scheme. I used light and dark shades of yellow to give the room warmth and brightness. This activity helped me see how one color can create a cozy and unified look when used in different ways.",
+        alt: "Monochromatic bedroom drawing in yellow tones"
+      },
+
+      // Complementary Office
+      {
+        src: "assets/images/crafts/ComplementaryOffice.jpg",
+        title: "Complementary Office",
+        caption: "For my project, I designed an office using complementary colors—orange and blue. These two colors sit opposite each other on the color wheel, which makes the space lively and balanced. Using complementary colors helped me understand how contrast can make a room feel energetic and visually appealing.",
+        alt: "Office drawing using complementary orange and blue colors"
+      },
+
+      // 2-Point Perspective Boxes
+      {
+        src: "assets/images/crafts/boxes.png",
+        title: "2-Point Perspective Boxes",
+        caption: "In class, I practiced drawing boxes in two-point perspective. This helped me learn how to show depth and angles more realistically. It was a great exercise to improve my drawing skills and understand how objects look in 3D space.",
+        alt: "Two-point perspective boxes practice drawing"
+      },
+
+      // Bubble Name
+      {
+        src: "assets/images/crafts/Bubble.jpg",
+        title: "Bubble Name",
+        caption: "For this project, I made a bubble name artwork that included an abstract picture of a cat. I wrote my name in cursive in the middle of the design. This project let me be creative with shapes and colors while expressing my style in a fun and artistic way.",
+        alt: "Bubble name artwork with a cat drawing"
+      },
+
+      // Foldable Bedroom
+      {
+        src: "assets/images/crafts/Foldable.png",
+        title: "Foldable Bedroom",
+        caption: "In this project, I created a foldable bedroom, where everything in the room can fold or collapse to save space. This design helped me think about smart, space-saving solutions, especially for small rooms. It was a fun and creative way to explore modern interior design ideas.",
+        alt: "Foldable bedroom model with foldable furniture"
+      },
+
+      // Foldable Living Room
+      {
+        src: "assets/images/crafts/FoldableLivingRoom.png",
+        title: "Foldable Living Room",
+        caption: "For this project, I designed a foldable living room, where every piece of furniture can be folded or stored away to save space. This idea is perfect for small apartments or multi-use areas. I enjoyed thinking creatively about how to make the room both stylish and functional. It showed me how smart design can make everyday living more comfortable and efficient.",
+        alt: "Foldable living room model with foldable furniture"
+      },
+
+      // Foldable Kitchen
+      {
+        src: "assets/images/crafts/Kitchen.png",
+        title: "Foldable Kitchen",
+        caption: "In this project, I created a foldable kitchen where all the elements—like the counters, table, and shelves—can be folded or tucked away to save space. This design is great for tiny homes or small apartments. It helped me think about how to make kitchens more flexible and efficient without losing style or function.",
+        alt: "Foldable kitchen model with foldable counters and shelves"
+      },
+
+      // Foldable Bathroom
+      {
+        src: "assets/images/crafts/Bathroom.png",
+        title: "Foldable Bathroom",
+        caption: "In this project, I created a foldable bathroom that includes a bathtub, mirror, table, and shelves—all designed to fold or move to save space. Even without a sink or toilet, the design focuses on comfort and smart storage. This project helped me think creatively about how to make a bathroom functional and stylish in a small space.",
+        alt: "Foldable bathroom model with bathtub and shelves"
+      },
+
+      // Design Thinking Poster
+      {
+        src: "assets/images/crafts/Thinking.png",
+        title: "Design Thinking Poster",
+        caption: "For this project, I created a poster about the steps of design thinking. I included all five steps: empathize, define, ideate, prototype, and test. On the poster, I explained what each step means and drew small pictures to show each one. This project helped me understand the creative process designers use to solve problems and come up with new ideas.",
+        alt: "Design thinking poster with the five steps"
+      },
+
+      // How to Make a Toast
+      {
+        src: "assets/images/crafts/Toast.png",
+        title: "How to Make a Toast",
+        caption: "For this project, I created a poster showing the steps to make toast. I included clear steps with pictures to make it easy to follow. This activity helped me think about how to break down simple tasks into clear instructions, just like in design thinking.",
+        alt: "Poster showing steps to make toast"
+      },
+
+      // LOVE in 1-Point Perspective
+      {
+        src: "assets/images/crafts/LOVE.png",
+        title: "LOVE in 1-Point Perspective",
+        caption: "In class, I practiced one-point perspective by drawing the word “Love.” This technique helped me learn how to add depth and dimension, making the letters look like they stretch back into space. It was a creative way to combine art and design skills.",
+        alt: "One-point perspective drawing of the word LOVE"
+      }
+    ];
 
     // --- Slider logic ---
     let idx = 0;
